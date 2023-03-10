@@ -15,6 +15,8 @@ function ProductSpecific(){
   useEffect(() => {
     console.log(cart);
   }, [cart]);
+
+  
   if(isLoading){
     return (
       <div>Loading</div>
@@ -25,7 +27,6 @@ function ProductSpecific(){
     return <div>An Error Occurred Fetching The Data.</div>;
   }
 
-  console.log(data)
   updateHead(data.title, data.description)
   return(
     <>

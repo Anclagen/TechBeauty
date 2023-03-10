@@ -7,7 +7,7 @@ Simple e-com website made using React, Redux, and Styled Components
 - [x] Create a new CRA app.
 - [x] Create a Header that has a Nav.
 - [x] Add React Router and route to each of the pages. The ProductPage page will be using a dynamic segment.
-- [ ] Create a Cart Icon component and position this next to your Nav. This Cart Icon component will have an overlay that displays the number of items in the cart.
+- [x] Create a Cart Icon component and position this next to your Nav. This Cart Icon component will have an overlay that displays the number of items in the cart.
 - [x] Create a Footer component
 - [x] Create a Layout component that has your Header and Footer.
       Create pages:
