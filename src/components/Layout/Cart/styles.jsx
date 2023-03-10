@@ -52,7 +52,7 @@ export const CartImage = styled.img`
 `
 
 export const CartItemsList = styled.div`
-overflow-y: scroll;
+overflow-y: auto;
 color: black;
 position: absolute;
 top: 90%;
