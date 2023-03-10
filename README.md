@@ -4,21 +4,21 @@ Simple e-com website made using React, Redux, and Styled Components
 
 ## Tasks
 
-- [ ] Create a new CRA app.
-- [ ] Create a Header that has a Nav.
-- [ ] Add React Router and route to each of the pages. The ProductPage page will be using a dynamic segment.
+- [x] Create a new CRA app.
+- [x] Create a Header that has a Nav.
+- [x] Add React Router and route to each of the pages. The ProductPage page will be using a dynamic segment.
 - [ ] Create a Cart Icon component and position this next to your Nav. This Cart Icon component will have an overlay that displays the number of items in the cart.
-- [ ] Create a Footer component
-- [ ] Create a Layout component that has your Header and Footer.
+- [x] Create a Footer component
+- [x] Create a Layout component that has your Header and Footer.
       Create pages:
 - [ ] Home
-  - [ ] Fetch the list of products on the Homepage and store this as a state.
-  - [ ] Display a Product component for each item. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page.
+  - [x] Fetch the list of products on the Homepage and store this as a state.
+  - [x] Display a Product component for each item. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page.
   - [ ] Lookahead/auto-complete search bar component. Typing values in the search bar should display products where the title matches the search input. Clicking on an item should take the user to the ProductPage page. Tip: Filter the user input and then display products that match the input.
 - [ ] Product Specific
-  - [ ] On the ProductPage, use the ID of the product as the params for the dynamic segment.
-  - [ ] Display individual items data.
-  - [ ] Add to cart button. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart.
+  - [x] On the ProductPage, use the ID of the product as the params for the dynamic segment.
+  - [x] Display individual items data.
+  - [x] Add to cart button. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart.
   - [ ] Reviews listed for the product if there are any.
   - [ ] You should use the discountedPrice property to display the price of the product. If there is a difference between the discountedPrice and price properties then that means there is a discount for that product. Calculate what this discount is and display it on the page.
 - [ ] Checkout/Cart Page
