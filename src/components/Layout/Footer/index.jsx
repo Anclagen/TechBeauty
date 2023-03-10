@@ -6,10 +6,9 @@ export default function Footer() {
       <div>
         <FooterHeading>Site Map</FooterHeading>
         <FooterLinks to="/">Home</FooterLinks>
-        <FooterLinks to="/">Products</FooterLinks>
-        <FooterLinks to="/">Contact</FooterLinks>
-        <FooterLinks to="/">Cart</FooterLinks>
-        <FooterLinks to="/">About</FooterLinks>
+        <FooterLinks to="/contact">Contact</FooterLinks>
+        <FooterLinks to="/cart">Cart</FooterLinks>
+        <FooterLinks to="/about">About</FooterLinks>
       </div>
       <div>
         <p>Copyright &#169; TechBeauty 2023 </p>
