@@ -2,9 +2,18 @@ import React from "react"
 import { CartIcon, CartImage, CartItemsList, CartLink, CartItemListImage } from "./styles"
 import cartImage from "../../../assets/shopping_cart.png"
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
+
 
 export default function Cart(){
+  //get cart
   const cart = useSelector((state) => state.cart);
+
+  // update cart in local on change
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
 
   return (
   <CartIcon>

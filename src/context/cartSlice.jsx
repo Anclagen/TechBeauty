@@ -6,11 +6,21 @@ const initialState = {
   total: 0
 };
 
+// Check local for a cart
+const getLocalCart = () => {
+  const cart = localStorage.getItem('cart');
+  if (cart) {
+    return JSON.parse(cart);
+  } else {
+    return initialState;
+  }
+};
+
 export const cartSlice = createSlice({
   // The name of our reducer
   name: 'cart',
   // The initial state of our reducer
-  initialState,
+  initialState: getLocalCart,
   // These are the actions that will be made available
 
   reducers: {
