@@ -2,7 +2,7 @@ import {useParams } from "react-router-dom"
 import { baseURL } from "../../utilities/constants";
 import { useAPI } from "../../hooks/API";
 import { updateHead } from "../../utilities/updateHead";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../context/cartSlice";
 import { PageGrid, Wrapper, DetailsContainer, Divider, ImageContainer, ProductImage, ProductSaleBanner, Heading1, Heading2, RatingStar, RatingLink, ButtonAddCart,IconImage, CurrentPrice, PreviousPrice, PreviousPriceAmount } from "./styles";
 import fullStar from "../../assets/review_star.png"
