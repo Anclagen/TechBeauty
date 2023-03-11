@@ -52,23 +52,26 @@ export const CartImage = styled.img`
 `
 
 export const CartItemsList = styled.div`
-overflow-y: auto;
-color: black;
-position: absolute;
-top: 90%;
-right: 0%;
+  overflow-y: auto;
+  color: black;
+  position: absolute;
+  top: 90%;
+  right: 0%;
   display: none;
-    ${CartIcon}:hover & {
-    display: block;
-  }
   background-color: var(--light);
   width: 250px;
   max-width: 350px;
   max-height: 60vh;
   border: 2px solid var(--secondary);
+    z-index: 100;
+
+  ${CartIcon}:hover & {
+    display: block;
+  }
+
   @media (min-width: 805px) {
     width: 450px;
-    }
+  }
 `
 
 export const CartItemListImage = styled.img`

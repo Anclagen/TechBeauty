@@ -2,10 +2,10 @@ import { baseURL } from "../../utilities/constants";
 import { useAPI } from "../../hooks/API";
 import  ProductCard  from "../../components/ProductCard";
 import  ProductCardLoader  from "../../components/ProductLoader";
-import { Banner, HomeHeading, ProductGrid, PageWrapper, Main, FilterContainer,Filter, HiddenLabel} from "./styles";
+import { Banner, HomeHeading, ProductGrid, PageWrapper, Main, FilterContainer,Filter, HiddenLabel, SearchContainer} from "./styles";
 import bannerImage from "../../assets/banner.jpg"
 import { updateHead } from "../../utilities/updateHead";
-//import { search } from "../../utilities/search";
+import Search from "../../components/Search";
 
 function Products() { 
   const {data, isLoading, isError} = useAPI(baseURL);
@@ -37,9 +37,14 @@ export default function Home(){
 
   return(
     <Main>
-      <Banner src={bannerImage} alt="Heart shaped mechanical clock"></Banner>
+      <HomeHeading>Welcome To TechBeauty</HomeHeading>
+      <SearchContainer>
+        <Banner src={bannerImage} alt="Heart shaped mechanical clock"/>
+        <Search/>
+      </SearchContainer>
+      
       <PageWrapper>
-      <HomeHeading>Explore TechBeauty's Products</HomeHeading>
+      
         <FilterContainer>
           <h2>All Products</h2>
         

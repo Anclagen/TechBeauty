@@ -7,26 +7,34 @@ export const PageWrapper = styled.div`
   `
 
 export const Main = styled.main`
+position: relative;
 margin: 0 auto;
+width: 100%;
+`
+export const HomeHeading = styled.h1`
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: var(--secondary);
+  margin: 0;
+  padding: 0.75rem 0;
+`
+
+export const SearchContainer = styled.div`
+  position: relative;
+  width: 100%;
 `
 
 export const Banner = styled.img`
   width: 100%;
-  max-width: 1900px;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: 50% 20%;
   display: block;
   margin: 0 auto;
   box-shadow: inset 40px 0 40px -16px, inset -40px 0 40px -16px;
 `
 
-export const HomeHeading = styled.h1`
-  font-size: 3rem;
-  text-align: center;
-`
-
-
-
 //might want to put this elsewhere
-
 export const ProductGrid = styled.div`
   display: grid;
   width: 100%;
