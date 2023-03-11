@@ -2,6 +2,8 @@
 
 Simple e-com website made using React, Redux, and Styled Components
 
+[Development Site](https://gleaming-boba-6793eb.netlify.app/)
+
 ## Tasks
 
 - [x] Create a new CRA app.
@@ -15,12 +17,12 @@ Simple e-com website made using React, Redux, and Styled Components
   - [x] Fetch the list of products on the Homepage and store this as a state.
   - [x] Display a Product component for each item. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page.
   - [ ] Lookahead/auto-complete search bar component. Typing values in the search bar should display products where the title matches the search input. Clicking on an item should take the user to the ProductPage page. Tip: Filter the user input and then display products that match the input.
-- [ ] Product Specific
+- [x] Product Specific
   - [x] On the ProductPage, use the ID of the product as the params for the dynamic segment.
   - [x] Display individual items data.
   - [x] Add to cart button. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart.
-  - [ ] Reviews listed for the product if there are any.
-  - [ ] You should use the discountedPrice property to display the price of the product. If there is a difference between the discountedPrice and price properties then that means there is a discount for that product. Calculate what this discount is and display it on the page.
+  - [x] Reviews listed for the product if there are any.
+  - [x] You should use the discountedPrice property to display the price of the product. If there is a difference between the discountedPrice and price properties then that means there is a discount for that product. Calculate what this discount is and display it on the page.
 - [ ] Checkout/Cart Page
   - [ ] Clicking on the Cart icon will load the Cart page which will list all of the products as well as a total. The Cart page will have a Checkout button at the button. Clicking this Checkout button then goes to a Checkout success page.
 - [ ] CheckoutSuccess Page
