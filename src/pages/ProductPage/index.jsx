@@ -31,7 +31,7 @@ function RatingStars({ rating, reviews }) {
 
 
 function ProductPage(){
-  const cart = useSelector((state) => state.cart);
+  //const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const params = useParams();
   const {data, isLoading, isError} = useAPI((baseURL+ params.id));
