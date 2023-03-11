@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   :root{
     --primary: #0C0B0F;
     --secondary: #A97D36;
+    --tertiary: #f0ddbf;
     --light: #f5f3ec;
     --card-shadow: 0px 0px 10px grey;
     --nav-text-size: 1.5rem;
@@ -24,7 +25,11 @@ const GlobalStyle = createGlobalStyle`
   #root{
     min-height: 100dvh;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: 1fr auto;
+  }
+
+  main{
+    margin-top: 90px;
   }
 `;
  

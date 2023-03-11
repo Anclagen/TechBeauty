@@ -11,6 +11,9 @@ export const HeaderStyles = styled.header`
   background-color: var(--primary);
   box-shadow: 0px 3px 10px var(--secondary);
   min-height: 85px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
 `;
 
 export const Navigation = styled.nav`
