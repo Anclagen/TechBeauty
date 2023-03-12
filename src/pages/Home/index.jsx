@@ -1,8 +1,7 @@
 import { baseURL } from "../../utilities/constants";
 import  ProductCard  from "../../components/ProductCard";
 import  ProductCardLoader  from "../../components/ProductLoader";
-import { Banner, HomeHeading, ProductGrid, PageWrapper, Main, FilterContainer,Filter, HiddenLabel, SearchContainer} from "./styles";
-import bannerImage from "../../assets/banner.jpg"
+import { HomeHeading, ProductGrid, PageWrapper, Main, FilterContainer,Filter, HiddenLabel} from "./styles";
 import { updateHead } from "../../utilities/updateHead";
 import Search from "../../components/Search";
 import { useEffect } from "react";
@@ -14,7 +13,7 @@ function Products() {
   const dispatch = useDispatch();
   const {data, isLoading, isError} = useSelector((state) => state.products);
 
-  //prevent constant reloading
+  //prevent constant reloading, also a means of storing for search component.
   useEffect(() => {
     if(data.length === 0){
       const getProducts = async () => {
@@ -58,11 +57,7 @@ export default function Home(){
   return(
     <Main>
       <HomeHeading>Welcome To TechBeauty</HomeHeading>
-      <SearchContainer>
-        <Banner src={bannerImage} alt="Heart shaped mechanical clock"/>
-        <Search/>
-      </SearchContainer>
-      
+      <Search/>
       <PageWrapper>
       
         <FilterContainer>

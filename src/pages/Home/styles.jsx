@@ -8,7 +8,7 @@ export const PageWrapper = styled.div`
 
 export const Main = styled.main`
 position: relative;
-margin: 0 auto;
+margin: 86px auto 0 auto;
 width: 100%;
 `
 export const HomeHeading = styled.h1`
@@ -17,21 +17,6 @@ export const HomeHeading = styled.h1`
   background-color: var(--secondary);
   margin: 0;
   padding: 0.75rem 0;
-`
-
-export const SearchContainer = styled.div`
-  position: relative;
-  width: 100%;
-`
-
-export const Banner = styled.img`
-  width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-  object-position: 50% 20%;
-  display: block;
-  margin: 0 auto;
-  box-shadow: inset 40px 0 40px -16px, inset -40px 0 40px -16px;
 `
 
 //might want to put this elsewhere
