@@ -18,10 +18,10 @@ export default function Cart(){
   return (
   <CartIcon>
     <CartLink to="/cart" total={cart.totalItems}>
-      <CartImage src={cartImage}/> Cart
+      <CartImage src={cartImage} alt="cart icon"/> Cart
     </CartLink>
     <CartItemsList>
-      {cart.products.length > 0 ? cart.products.map(item => <div key={item.id}><p><CartItemListImage src={item.imageUrl}/>{item.title}, {item.quantity}</p></div>) : "Your Cart Is Empty."}
+      {cart.products.length > 0 ? cart.products.map(item => <div key={item.id}><p><CartItemListImage src={item.imageUrl} alt={item.title}/>{item.title}, {item.quantity}</p></div>) : "Your Cart Is Empty."}
       {cart.products.length > 0 ? <p>Total: kr {cart.total.toFixed(2)}</p> : ""}
     </CartItemsList>
   </CartIcon>)
