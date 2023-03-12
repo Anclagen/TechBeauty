@@ -1,13 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   data: [],
   isLoading: true,
   isError: false,
-}
+};
 
 const productsSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState,
   reducers: {
     fetchingProducts(state) {
@@ -17,7 +17,7 @@ const productsSlice = createSlice({
     fetchFailed(state) {
       state.isLoading = false;
       state.isError = true;
-    }, 
+    },
     fetchedProducts(state, action) {
       state.isLoading = false;
       state.isError = false;

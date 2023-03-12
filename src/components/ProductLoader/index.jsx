@@ -3,10 +3,10 @@ import { ProductLoaderContainer, ProductLoaderImage, ProductLoaderHeading, Produ
 export default function ProductCardLoader() {
   return (
     <ProductLoaderContainer>
-      <ProductLoaderImage/>
-      <ProductLoaderHeading/>
-      <ProductLoaderPrice/>
-      <ProductLoaderButton/>
+      <ProductLoaderImage />
+      <ProductLoaderHeading />
+      <ProductLoaderPrice />
+      <ProductLoaderButton />
     </ProductLoaderContainer>
   );
 }

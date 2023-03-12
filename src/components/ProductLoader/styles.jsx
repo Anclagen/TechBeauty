@@ -1,11 +1,11 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const ProductLoadingAnimation = keyframes`
   0% {opacity: 35%}
   40%{opacity: 100%}
   60%{opacity: 100%}
   100%{opacity: 35%}
-`
+`;
 export const ProductLoaderContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,26 +25,26 @@ export const ProductLoaderImage = styled.div`
   height: 200px;
   background-color: lightgrey;
   margin-bottom: 1.5rem;
-`
+`;
 export const ProductLoaderHeading = styled.div`
   width: 270px;
   height: 29px;
   border-radius: 1rem;
   background-color: lightgrey;
-  margin: 0 auto 19px auto; 
-`
+  margin: 0 auto 19px auto;
+`;
 export const ProductLoaderPrice = styled.div`
   width: 270px;
   height: 19px;
   border-radius: 1rem;
   background-color: lightgrey;
-  margin:  0 auto 16px auto;
-`
+  margin: 0 auto 16px auto;
+`;
 
 export const ProductLoaderButton = styled.div`
   width: 102px;
   border-radius: 1rem;
   height: 45px;
   background-color: lightgrey;
-  margin:  0 auto 16px auto;
-`
+  margin: 0 auto 16px auto;
+`;

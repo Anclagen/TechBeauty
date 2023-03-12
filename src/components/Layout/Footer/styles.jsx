@@ -7,13 +7,13 @@ export const FooterContainer = styled.footer`
   margin: 0;
   text-align: center;
   padding: 1rem;
-`
+`;
 
 export const FooterHeading = styled.h2`
   color: var(--light);
   font-size: 2rem;
   font-weight: var(--nav-text-weight);
-`
+`;
 
 export const FooterLinks = styled(Link)`
   display: block;
@@ -24,10 +24,10 @@ export const FooterLinks = styled(Link)`
   padding: 0.5rem;
   margin: 0.75rem;
   @media (min-width: 805px) {
-      display: inline-block;
-    }
+    display: inline-block;
+  }
 
-  :hover{
+  :hover {
     text-decoration: underline;
   }
-`
+`;

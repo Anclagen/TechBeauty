@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom"
-import styled from "styled-components"
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const SearchItemImage = styled.img`
-
   margin-left: 1rem;
   display: none;
   width: 60px;
@@ -11,30 +10,31 @@ export const SearchItemImage = styled.img`
   @media (min-width: 700px) {
     display: block;
   }
-`
+`;
 
-export const SearchItemLink = styled(Link)`width: 100%;
+export const SearchItemLink = styled(Link)`
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items:center ;
+  align-items: center;
   text-decoration: none;
   color: black;
   margin-top: 0.75rem;
 
-  :hover{
+  :hover {
     background-color: var(--light-hover);
   }
-`
+`;
 
 export const SearchItemTitle = styled.span`
   font-weight: 600;
   margin: 0 1rem;
   flex-grow: 2;
   @media (min-width: 700px) {
-    font-size: 1.125rem;  
+    font-size: 1.125rem;
   }
-`
+`;
 
 export const SearchItemPrice = styled.span`
   display: none;
@@ -47,5 +47,4 @@ export const SearchItemPrice = styled.span`
   @media (min-width: 700px) {
     font-size: 1.125rem;
   }
-`
-
+`;

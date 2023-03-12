@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 export function useAPI(url) {
   const [data, setData] = useState([]);
@@ -23,6 +23,6 @@ export function useAPI(url) {
 
     getData();
   }, [url]);
-  
+
   return { data, isLoading, isError };
 }

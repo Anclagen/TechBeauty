@@ -1,14 +1,13 @@
-import React, {useState} from "react";
-import { HeaderStyles, Navigation, NavLinks, MainLinksContainer, MenuIcon} from "./styles";
-import Cart  from "../Cart";
-import Logo  from "../../Logo";
-
+import React, { useState } from "react";
+import { HeaderStyles, Navigation, NavLinks, MainLinksContainer, MenuIcon } from "./styles";
+import Cart from "../Cart";
+import Logo from "../../Logo";
 
 export default function Header() {
   const [display, toggleOpen] = useState("none");
-  
+
   function onButtonClick() {
-    toggleOpen(display === "flex" ? "none": "flex")
+    toggleOpen(display === "flex" ? "none" : "flex");
   }
 
   return (

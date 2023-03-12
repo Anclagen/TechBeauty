@@ -1,4 +1,4 @@
-import { createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -33,5 +33,5 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 90px;
   }
 `;
- 
+
 export default GlobalStyle;
