@@ -13,10 +13,10 @@ Simple e-com website made using React, Redux, and Styled Components
 - [x] Create a Footer component
 - [x] Create a Layout component that has your Header and Footer.
       Create pages:
-- [ ] Home
+- [x] Home
   - [x] Fetch the list of products on the Homepage and store this as a state.
   - [x] Display a Product component for each item. This Product component should look like a product card. Each Product component will have a View product button which will link to the ProductPage page.
-  - [ ] Lookahead/auto-complete search bar component. Typing values in the search bar should display products where the title matches the search input. Clicking on an item should take the user to the ProductPage page. Tip: Filter the user input and then display products that match the input.
+  - [x] Lookahead/auto-complete search bar component. Typing values in the search bar should display products where the title matches the search input. Clicking on an item should take the user to the ProductPage page. Tip: Filter the user input and then display products that match the input.
 - [x] Product Specific
   - [x] On the ProductPage, use the ID of the product as the params for the dynamic segment.
   - [x] Display individual items data.
