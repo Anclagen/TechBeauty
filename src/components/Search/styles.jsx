@@ -65,8 +65,10 @@ export const AutoComplete = styled.div`
   }
 `
 
-export const SearchItemImage = styled.img`
-  width: 60px;
-  height: 40px;
-  object-fit: cover;
+export const ResultContainer = styled.div`
+  padding: 2rem 0 1rem 0;
+`
+
+export const NoResult = styled.p`
+  padding: 2rem 0 0 1rem;
 `

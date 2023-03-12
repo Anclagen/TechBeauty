@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     --secondary: #A97D36;
     --tertiary: #f0ddbf;
     --light: #f5f3ec;
+    --light-hover: #e6ddbd;
     --card-shadow: 0px 0px 10px grey;
     --nav-text-size: 1.5rem;
     --nav-text-weight: 600;
