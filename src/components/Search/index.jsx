@@ -11,7 +11,6 @@ import SearchItem from "../SearchItem";
 export default function Search() {
   const { isLoading, data } = useSelector((state) => state.products);
   const [query, setQuery] = useState("");
-  const autoCompleteRef = useRef(null);
 
   //filter out result for a single letter
   let results = search(data, query);

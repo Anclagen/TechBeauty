@@ -55,15 +55,17 @@ export const AutoComplete = styled.div`
   display: none;
   overflow: auto;
   max-height: 300px;
+
   :hover,
-  :focus,
-  ${SearchInput}:focus &,
-  a:focus-within & {
+  &:focus-within {
     display: block;
   }
 
-  ${SearchInput}:focus ~ &,
-  a:focus {
+  :focus-within {
+    display: block;
+  }
+
+  ${SearchInput}:focus ~ & {
     display: block;
   }
 `;
