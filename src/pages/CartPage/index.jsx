@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom";
 import { updateHead } from "../../utilities/updateHead";
-import { Wrapper, CartItemImage, CartItemContainer, CartItemImageContainer, CartItemDetailsContainer, CartItemTitle, RemoveButton, CartGrid, QuantityButton } from "./styles";
+import {
+  Wrapper,
+  CartItemImage,
+  CartItemContainer,
+  CartItemImageContainer,
+  CartItemDetailsContainer,
+  CartItemTitle,
+  RemoveButton,
+  CartGrid,
+  QuantityButton,
+  CartCheckoutSection,
+  CartCheckoutDetails,
+  CartCheckoutButton,
+} from "./styles";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../context/cartSlice";
 
@@ -24,7 +37,7 @@ function CartPage() {
               <CartItemDetailsContainer>
                 <CartItemTitle>{item.title}</CartItemTitle>
                 <p>Price: {item.discountedPrice.toFixed(2)}</p>
-                <p>Quantity: {item.quantity}</p>
+                <p>Quantity:</p>
                 <p>
                   <QuantityButton
                     onClick={() => {
@@ -48,11 +61,19 @@ function CartPage() {
           ))}
           <button onClick={() => dispatch(clearCart())}>Empty Cart</button>
         </section>
-        <section>
-          <h2>Checkout Summary</h2>
-          <div>Total Price:{cart.total.toFixed(2)}</div>
-          <Link to="../success">Place Order</Link>
-        </section>
+        <CartCheckoutSection>
+          <CartCheckoutDetails>
+            <h2>Checkout Summary</h2>
+            <p>Price: {(cart.total / 1.25).toFixed(2)}</p>
+            <p>VAT 25%: {(cart.total - cart.total / 1.25).toFixed(2)} </p>
+            <p>Delivery: Free.</p>
+
+            <p>
+              <b>Total Price: kr {cart.total.toFixed(2)}</b>
+            </p>
+            <CartCheckoutButton to="../success">Place Order</CartCheckoutButton>
+          </CartCheckoutDetails>
+        </CartCheckoutSection>
       </CartGrid>
     </Wrapper>
   );

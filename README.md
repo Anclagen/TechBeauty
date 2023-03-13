@@ -23,8 +23,8 @@ Simple e-com website made using React, Redux, and Styled Components
   - [x] Add to cart button. Create a cart state. When the Add to cart button on the ProductPage is clicked, add the product to the cart.
   - [x] Reviews listed for the product if there are any.
   - [x] You should use the discountedPrice property to display the price of the product. If there is a difference between the discountedPrice and price properties then that means there is a discount for that product. Calculate what this discount is and display it on the page.
-- [ ] Checkout/Cart Page
-  - [ ] Clicking on the Cart icon will load the Cart page which will list all of the products as well as a total. The Cart page will have a Checkout button at the button. Clicking this Checkout button then goes to a Checkout success page.
+- [x] Checkout/Cart Page
+  - [x] Clicking on the Cart icon will load the Cart page which will list all of the products as well as a total. The Cart page will have a Checkout button at the button. Clicking this Checkout button then goes to a Checkout success page.
 - [ ] CheckoutSuccess Page
   - [ ] The Checkout success page will display a message to the user notifying them that their order was successful.
   - [ ] There should also be a link that lets a user go back to the store.

@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.main`
   width: auto;
   margin: 90px auto 2rem auto;
   padding: 0 1rem;
-  max-width: 1200px;
+  max-width: 1000px;
   @media (min-width: 700px) {
+    width: 80%;
     padding: 0 2rem;
   }
 `;
@@ -13,8 +15,7 @@ export const Wrapper = styled.main`
 export const CartGrid = styled.div`
   @media (min-width: 700px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 5fr 3fr;
   }
 `;
 
@@ -42,7 +43,7 @@ export const CartItemDetailsContainer = styled.div`
 
 export const CartItemTitle = styled.h3`
   font-size: 1rem;
-  margin-top: 0;
+  margin-top: 1rem;
 `;
 
 export const CartItemImage = styled.img`
@@ -82,4 +83,38 @@ export const RemoveButton = styled.button`
     border: 1px solid var(--tertiary);
     cursor: pointer;
   }
+`;
+
+export const CartCheckoutSection = styled.section`
+  position: relative;
+  height: 100%;
+  margin-top: 1rem;
+  @media (min-width: 700px) {
+    margin-top: 0;
+    padding: 1rem;
+  }
+`;
+
+export const CartCheckoutDetails = styled.div`
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--tertiary);
+  @media (min-width: 700px) {
+    position: fixed;
+  }
+`;
+
+export const CartCheckoutButton = styled(Link)`
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  background-color: var(--secondary);
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  margin-top: 2rem;
 `;
