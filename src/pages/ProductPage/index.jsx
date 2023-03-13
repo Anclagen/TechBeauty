@@ -3,7 +3,7 @@ import { baseURL } from "../../utilities/constants";
 import { useAPI } from "../../hooks/API";
 import { updateHead } from "../../utilities/updateHead";
 import { useDispatch } from "react-redux";
-import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../context/cartSlice";
+import { addToCart } from "../../context/cartSlice";
 import {
   PageGrid,
   Wrapper,
@@ -90,9 +90,6 @@ function ProductPage() {
           </ButtonAddCart>
           <Divider />
           <p>Categories: {data.tags ? data.tags.join(", ") : "None"}</p>
-          <button onClick={() => dispatch(removeFromCart({ product: data }))}>remove</button>
-          <button onClick={() => dispatch(decreaseQuantity({ quantity: 1, product: data }))}>decrease</button>
-          <button onClick={() => dispatch(clearCart())}>clear</button>
         </DetailsContainer>
       </PageGrid>
       <Heading2 id="reviews">Reviews</Heading2>
