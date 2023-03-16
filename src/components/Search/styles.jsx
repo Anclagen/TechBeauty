@@ -23,7 +23,7 @@ export const SearchInput = styled.input`
   max-width: 800px;
   padding: 0.5rem;
   border-radius: 1rem;
-  box-shadow: 0 0 20px var(--secondary);
+  box-shadow: 0 0 20px ${({ theme }) => theme.color.secondary};
   font-size: 1.25rem;
   ::placeholder {
     text-align: center;
@@ -49,19 +49,20 @@ export const AutoComplete = styled.div`
   transform: translate(-50%);
   width: 80%;
   max-width: 800px;
-  background-color: var(--light);
+  background-color: ${({ theme }) => theme.color.light};
   border-radius: 1rem;
-  box-shadow: 0 0 20px var(--secondary);
+  box-shadow: 0 0 20px ${({ theme }) => theme.color.secondary};
   display: none;
   overflow: auto;
   max-height: 300px;
 
   :hover,
-  &:focus-within {
+  &:focus-within,
+  :focus {
     display: block;
   }
 
-  :focus-within {
+  > a:focus {
     display: block;
   }
 

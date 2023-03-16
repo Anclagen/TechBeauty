@@ -23,7 +23,7 @@ export const SearchItemLink = styled(Link)`
   margin-top: 0.75rem;
 
   :hover {
-    background-color: var(--light-hover);
+    background-color: ${({ theme }) => theme.color.lightHover};
   }
 `;
 

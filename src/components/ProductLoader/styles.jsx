@@ -12,8 +12,8 @@ export const ProductLoaderContainer = styled.div`
   width: 300px;
   height: 382px;
   border-radius: 1rem;
-  background-color: var(--light);
-  box-shadow: var(--card-shadow);
+  background-color: ${({ theme }) => theme.color.light};
+  box-shadow: ${({ theme }) => theme.shadow.card};
   overflow: hidden;
   animation-name: ${ProductLoadingAnimation};
   animation-duration: 1.5s;

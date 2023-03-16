@@ -8,14 +8,18 @@ export const LogoLink = styled(Link)`
 `;
 
 export const LogoImg = styled.img`
-  max-width: 80px;
-  margin: auto 1rem auto 0.5rem;
+  max-width: 70px;
+  margin: 10px 1rem auto 0.5rem;
+  @media (min-width: 805px) {
+    margin: auto 1rem auto 0.5rem;
+    max-width: 80px;
+  }
 `;
 export const LogoText = styled.span`
   display: none;
-  color: var(--secondary);
+  color: ${({ theme }) => theme.color.secondary};
   font-size: 1.75rem;
-  @media (min-width: 460px) {
+  @media (min-width: 550px) {
     display: block;
   }
 `;

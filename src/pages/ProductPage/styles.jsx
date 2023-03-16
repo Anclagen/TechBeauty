@@ -43,7 +43,7 @@ export const PageGrid = styled.div`
 export const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  background-color: var(--tertiary);
+  background-color: ${({ theme }) => theme.color.tertiary};
   overflow: hidden;
   border-radius: 3rem;
   overflow: hidden;
@@ -63,7 +63,7 @@ export const ProductImage = styled.img`
 export const ProductSaleBanner = styled.div`
   width: 100%;
   padding: 0.5rem;
-  background-color: var(--secondary);
+  background-color: ${({ theme }) => theme.color.secondary};
   font-size: 1.5rem;
   text-align: center;
   position: absolute;
@@ -124,6 +124,6 @@ export const IconImage = styled.img`
 `;
 
 export const Divider = styled.hr`
-  color: var(--secondary);
+  color: ${({ theme }) => theme.color.secondary};
   margin: 2rem 0;
 `;

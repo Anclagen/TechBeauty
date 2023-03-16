@@ -14,7 +14,7 @@ export const Main = styled.main`
 export const HomeHeading = styled.h1`
   font-size: 2.5rem;
   text-align: center;
-  background-color: var(--secondary);
+  background-color: ${({ theme }) => theme.color.secondary};
   margin: 0;
   padding: 0.75rem 0;
 `;

@@ -2,24 +2,24 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
-  background-color: var(--primary);
-  color: var(--light);
+  background-color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.light};
   margin: 0;
   text-align: center;
   padding: 1rem;
 `;
 
 export const FooterHeading = styled.h2`
-  color: var(--light);
+  color: ${({ theme }) => theme.color.light};
   font-size: 2rem;
-  font-weight: var(--nav-text-weight);
+  font-weight: ${({ theme }) => theme.textWeight.nav};
 `;
 
 export const FooterLinks = styled(Link)`
   display: block;
-  color: var(--light);
-  font-size: var(--nav-text-size);
-  font-weight: var(--nav-text-weight);
+  color: ${({ theme }) => theme.color.light};
+  font-size: ${({ theme }) => theme.textSize.nav};
+  font-weight: ${({ theme }) => theme.textWeight.nav};
   text-decoration: none;
   padding: 0.5rem;
   margin: 0.75rem;

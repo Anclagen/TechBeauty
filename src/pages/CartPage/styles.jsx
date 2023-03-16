@@ -31,7 +31,7 @@ export const CartItemContainer = styled.div`
 `;
 
 export const CartItemImageContainer = styled.div`
-  background-color: var(--tertiary);
+  background-color: ${({ theme }) => theme.color.tertiary};
   width: 80px;
   height: 70px;
   overflow: hidden;
@@ -57,8 +57,8 @@ export const CartItemPriceContainer = styled.div`
 `;
 
 export const QuantityButton = styled.button`
-  background-color: var(--tertiary);
-  border: 1px solid var(--secondary);
+  background-color: ${({ theme }) => theme.color.tertiary};
+  border: 1px solid ${({ theme }) => theme.color.secondary};
   width: 2rem;
   border-radius: 0.5rem;
   font-weight: 600;
@@ -66,21 +66,21 @@ export const QuantityButton = styled.button`
   text-align: center;
 
   :hover {
-    background-color: var(--secondary);
-    border: 1px solid var(--tertiary);
+    background-color: ${({ theme }) => theme.color.secondary};
+    border: 1px solid ${({ theme }) => theme.color.tertiary};
     cursor: pointer;
   }
 `;
 
 export const RemoveButton = styled.button`
-  background-color: var(--tertiary);
-  border: 1px solid var(--secondary);
+  background-color: ${({ theme }) => theme.color.tertiary};
+  border: 1px solid ${({ theme }) => theme.color.secondary};
   border-radius: 0.5rem;
   padding: 0.5rem;
   float: right;
   :hover {
-    background-color: var(--secondary);
-    border: 1px solid var(--tertiary);
+    background-color: ${({ theme }) => theme.color.secondary};
+    border: 1px solid ${({ theme }) => theme.color.tertiary};
     cursor: pointer;
   }
 `;
@@ -98,7 +98,7 @@ export const CartCheckoutSection = styled.section`
 export const CartCheckoutDetails = styled.div`
   padding: 1rem;
   border-radius: 1rem;
-  background-color: var(--tertiary);
+  background-color: ${({ theme }) => theme.color.tertiary};
   @media (min-width: 700px) {
     position: fixed;
   }
@@ -112,7 +112,7 @@ export const CartCheckoutButton = styled(Link)`
   border-radius: 1rem;
   font-weight: 600;
   font-size: 1.125rem;
-  background-color: var(--secondary);
+  background-color: ${({ theme }) => theme.color.secondary};
   text-align: center;
   text-decoration: none;
   color: black;

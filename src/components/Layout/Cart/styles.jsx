@@ -16,7 +16,7 @@ export const CartIcon = styled.div`
 `;
 export const CartLink = styled(Link)`
   position: relative;
-  font-size: var(--nav-text-size);
+  font-size: ${({ theme }) => theme.textSize.nav};
   color: white;
   text-decoration: none;
   list-style-type: none;
@@ -28,7 +28,7 @@ export const CartLink = styled(Link)`
     content: "${(props) => props.total}";
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--secondary);
+    color: ${({ theme }) => theme.color.secondary};
     display: flex;
     text-align: center;
     justify-content: center;
@@ -40,8 +40,8 @@ export const CartLink = styled(Link)`
     left: 15%;
     width: 30px;
     height: 30px;
-    background-color: var(--primary);
-    border: 1px solid var(--secondary);
+    background-color: ${({ theme }) => theme.color.primary};
+    border: 1px solid ${({ theme }) => theme.color.secondary};
   }
 `;
 
@@ -56,11 +56,11 @@ export const CartItemsList = styled.div`
   top: 90%;
   right: 0%;
   display: none;
-  background-color: var(--light);
+  background-color: ${({ theme }) => theme.color.light};
   width: 250px;
   max-width: 350px;
   max-height: 60vh;
-  border: 2px solid var(--secondary);
+  border: 2px solid ${({ theme }) => theme.color.secondary};
   z-index: 100;
 
   ${CartIcon}:hover & {

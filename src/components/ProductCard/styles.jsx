@@ -8,8 +8,8 @@ export const ProductContainer = styled.div`
   height: 100%;
   text-align: center;
   border-radius: 1rem;
-  background-color: var(--light);
-  box-shadow: var(--card-shadow);
+  background-color: ${({ theme }) => theme.color.light};
+  box-shadow: ${({ theme }) => theme.shadow.cards};
   overflow: hidden;
 `;
 
@@ -31,18 +31,13 @@ export const ProductLink = styled(Link)`
   font-weight: 600;
   padding: 0.8rem;
   width: fit-content;
-
   margin: 1rem auto;
-  background-color: var(--secondary);
+  background-color: ${({ theme }) => theme.color.secondary};
   transition: all 0.5s;
   border-radius: 1rem;
   box-sizing: border-box;
   :hover {
     background-color: white;
-    border: 1px solid var(--secondary);
+    border: 1px solid ${({ theme }) => theme.color.secondary};
   }
 `;
-
-export const ProductPrice = styled.p``;
-
-export const ProductDiscounted = styled.span``;
