@@ -1,4 +1,4 @@
-import mainLogo from "../../assets/logo_ecom.png";
+import mainLogo from "../../../assets/logo_ecom.png";
 import { LogoImg, LogoLink, LogoText } from "./styles";
 
 export default function Logo() {
