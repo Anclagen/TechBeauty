@@ -41,3 +41,20 @@ export const ProductLink = styled(Link)`
     border: 1px solid ${({ theme }) => theme.color.secondary};
   }
 `;
+
+export const ProductImageContainer = styled.div`
+  position: relative;
+  border-radius: 1rem 0 0 1rem;
+`;
+
+export const ProductSaleBanner = styled.div`
+  width: 100%;
+  padding: 0.5rem;
+  background-color: ${({ theme }) => theme.color.secondary};
+  font-size: 1.5rem;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: -35%;
+  transform: rotate(-40deg);
+`;
