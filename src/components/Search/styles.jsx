@@ -28,7 +28,7 @@ export const SearchInput = styled.input`
   ::placeholder {
     text-align: center;
   }
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const HiddenLabel = styled.label`
@@ -55,6 +55,7 @@ export const AutoComplete = styled.div`
   display: none;
   overflow: auto;
   max-height: 300px;
+  z-index: 1;
 
   :hover,
   &:focus-within,
