@@ -14,7 +14,6 @@ import {
   ProductSaleBanner,
   Heading1,
   Heading2,
-  RatingStar,
   RatingLink,
   ButtonAddCart,
   IconImage,
@@ -22,28 +21,8 @@ import {
   PreviousPrice,
   PreviousPriceAmount,
 } from "./styles";
-import fullStar from "../../assets/review_star.png";
-import emptyStar from "../../assets/empty_review_star.png";
 import cartIcon from "../../assets/shopping_cart_add.png";
-
-function RatingStars({ rating, reviews }) {
-  const full = parseInt(Math.round(rating));
-  const empty = 5 - full;
-  const stars = [];
-
-  for (let i = 0; i < full; i++) {
-    stars.push(<RatingStar src={fullStar} alt="rating star icon" key={`full-${i}`} />);
-  }
-  for (let i = 0; i < empty; i++) {
-    stars.push(<RatingStar src={emptyStar} alt="rating star icon" key={`empty-${i}`} />);
-  }
-
-  return (
-    <p>
-      Rating: {stars} ({reviews && reviews.length === 0 ? "Unrated" : rating})
-    </p>
-  );
-}
+import { RatingStars } from "../../components/RatingStars";
 
 function ProductPage() {
   //const cart = useSelector((state) => state.cart);
@@ -82,7 +61,7 @@ function ProductPage() {
           ) : (
             ""
           )}
-          <CurrentPrice>Current Price: {data.discountedPrice < data.price ? `kr ${data.discountedPrice}, Save kr ${data.price - data.discountedPrice}` : "kr " + data.discountedPrice}</CurrentPrice>
+          <CurrentPrice>Current Price: {data.discountedPrice < data.price ? `kr ${data.discountedPrice}, Save kr ${data.price - data.discountedPrice}` : "kr " + data.price}</CurrentPrice>
           <Divider />
           <ButtonAddCart onClick={() => dispatch(addToCart({ quantity: 1, product: data }))}>
             <IconImage src={cartIcon} alt="cart icon" />

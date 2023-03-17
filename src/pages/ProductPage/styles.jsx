@@ -17,11 +17,6 @@ export const Heading1 = styled.h1`
   }
 `;
 
-export const RatingStar = styled.img`
-  width: 1.5rem;
-  margin-bottom: -4px;
-`;
-
 export const RatingLink = styled.a`
   color: black;
   text-decoration: none;
