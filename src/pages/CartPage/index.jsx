@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { updateHead } from "../../utilities/updateHead";
 import {
   Wrapper,
