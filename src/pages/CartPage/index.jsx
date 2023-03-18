@@ -13,6 +13,8 @@ import {
   CartCheckoutSection,
   CartCheckoutDetails,
   CartCheckoutButton,
+  EmptyCart,
+  ReturnButton,
 } from "./styles";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../context/cartSlice";
@@ -22,6 +24,15 @@ function CartPage() {
   const cart = useSelector((state) => state.cart);
 
   updateHead("Your Cart", "Your cart page, showing all items you have added.");
+  if (cart.products.length === 0) {
+    return (
+      <EmptyCart>
+        <h1>Empty Cart</h1>
+        <p>Nothing in your cart.</p>
+        <ReturnButton to="/">Return to Store</ReturnButton>
+      </EmptyCart>
+    );
+  }
 
   return (
     <Wrapper>
