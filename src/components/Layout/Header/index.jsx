@@ -4,7 +4,7 @@ import Cart from "../Cart";
 import Logo from "../Logo";
 import HamburgerMenu from "../HamburgerMenu";
 import moonIcon from "../../../assets/moon_icon.jpg";
-import sunIcon from "../../../assets/sun_icon.jpg";
+//import sunIcon from "../../../assets/sun_icon.jpg";
 
 export default function Header() {
   const [display, toggleOpen] = useState("none");
