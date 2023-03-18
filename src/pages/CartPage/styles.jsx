@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { StandardButtonLink } from "../../components/styles/Button.styles";
 
 export const Wrapper = styled.main`
   width: auto;
@@ -10,6 +10,14 @@ export const Wrapper = styled.main`
     width: 80%;
     padding: 0 2rem;
   }
+`;
+
+export const EmptyCart = styled(Wrapper)`
+  text-align: center;
+`;
+
+export const ReturnButton = styled(StandardButtonLink)`
+  margin-top: 2rem;
 `;
 
 export const CartGrid = styled.div`
@@ -72,17 +80,9 @@ export const QuantityButton = styled.button`
   }
 `;
 
-export const RemoveButton = styled.button`
-  background-color: ${({ theme }) => theme.color.tertiary};
-  border: 1px solid ${({ theme }) => theme.color.secondary};
-  border-radius: 0.5rem;
-  padding: 0.5rem;
+export const RemoveButton = styled(QuantityButton)`
   float: right;
-  :hover {
-    background-color: ${({ theme }) => theme.color.secondary};
-    border: 1px solid ${({ theme }) => theme.color.tertiary};
-    cursor: pointer;
-  }
+  width: auto;
 `;
 
 export const CartCheckoutSection = styled.section`
@@ -104,17 +104,11 @@ export const CartCheckoutDetails = styled.div`
   }
 `;
 
-export const CartCheckoutButton = styled(Link)`
-  display: block;
-  box-sizing: border-box;
+export const CartCheckoutButton = styled(StandardButtonLink)`
   width: 100%;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-weight: 600;
   font-size: 1.125rem;
-  background-color: ${({ theme }) => theme.color.secondary};
   text-align: center;
-  text-decoration: none;
-  color: black;
-  margin-top: 2rem;
+  :hover {
+    background-color: ${({ theme }) => theme.color.tertiary};
+  }
 `;

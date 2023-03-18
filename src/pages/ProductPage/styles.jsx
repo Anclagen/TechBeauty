@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StandardButton } from "../../components/styles/Button.styles";
 
 export const Wrapper = styled.main`
   margin: 90px auto 2rem auto;
@@ -90,7 +91,7 @@ export const PreviousPriceAmount = styled.span`
   font-style: italic;
 `;
 
-export const ButtonAddCart = styled.button`
+export const ButtonAddCart = styled(StandardButton)`
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -98,14 +99,10 @@ export const ButtonAddCart = styled.button`
   justify-content: center;
   width: 100%;
   font-size: 1.125rem;
-  padding: 0.5rem;
-  border-radius: 1rem;
-  border: none;
   background-color: green;
   color: white;
   margin-bottom: 1rem;
   border: 1px solid green;
-  transition: all 0.5s;
   :hover {
     background-color: white;
     color: green;

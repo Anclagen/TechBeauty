@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { StandardButtonLink } from "../styles/Button.styles";
 
 export const ProductContainer = styled.div`
   display: flex;
@@ -24,22 +24,8 @@ export const ProductImage = styled.img`
   margin-bottom: 1.5rem;
 `;
 
-export const ProductLink = styled(Link)`
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  padding: 0.8rem;
-  width: fit-content;
+export const ProductLink = styled(StandardButtonLink)`
   margin: 1rem auto;
-  background-color: ${({ theme }) => theme.color.secondary};
-  transition: all 0.5s;
-  border-radius: 1rem;
-  box-sizing: border-box;
-  :hover {
-    background-color: white;
-    border: 1px solid ${({ theme }) => theme.color.secondary};
-  }
 `;
 
 export const ProductImageContainer = styled.div`
