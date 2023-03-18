@@ -21,7 +21,6 @@ function Products() {
           const res = await fetch(baseURL);
           const data = await res.json();
           dispatch(fetchedProducts(data));
-          console.log(data);
         } catch {
           dispatch(fetchFailed());
         }
@@ -41,7 +40,7 @@ function Products() {
   }
 
   if (isError) {
-    return <div>An Error Occurred Fetching The Data.</div>;
+    return <div>Fetch failed, please refresh and try again. If this problem persists contact the administrator at admin@admin.com.</div>;
   }
 
   return (
