@@ -6,6 +6,8 @@ Simple e-com website made using React, Redux, and Styled Components
 
 ## Tasks
 
+Core Requirements:
+
 - [x] Create a new CRA app.
 - [x] Create a Header that has a Nav.
 - [x] Add React Router and route to each of the pages. The ProductPage page will be using a dynamic segment.
@@ -25,19 +27,27 @@ Simple e-com website made using React, Redux, and Styled Components
   - [x] You should use the discountedPrice property to display the price of the product. If there is a difference between the discountedPrice and price properties then that means there is a discount for that product. Calculate what this discount is and display it on the page.
 - [x] Checkout/Cart Page
   - [x] Clicking on the Cart icon will load the Cart page which will list all of the products as well as a total. The Cart page will have a Checkout button at the button. Clicking this Checkout button then goes to a Checkout success page.
-- [ ] CheckoutSuccess Page
-  - [ ] The Checkout success page will display a message to the user notifying them that their order was successful.
-  - [ ] There should also be a link that lets a user go back to the store.
-        = [ ] The cart must be cleared if the user gets to the Checkout success page.
-- [ ] Contact Page
+- [x] CheckoutSuccess Page
+  - [x] The Checkout success page will display a message to the user notifying them that their order was successful.
+  - [x] There should also be a link that lets a user go back to the store.
+        = [x] The cart must be cleared if the user gets to the Checkout success page.
+- [x] Contact Page
   - Requirements:
-  - [ ] Full name (Minimum number of characters is 3, required)
-  - [ ] Subject (Minimum number of characters is 3, required)
-  - [ ] Email (Must be a valid email address, required)
-  - [ ] Body (Minimum number of characters is 3, required)
-  - [ ] Submit button
-  - [ ] console.log the data from the form once validation requirements are met.
-- [ ] Once your project is done, deploy it to Netlify.
+  - [x] Full name (Minimum number of characters is 3, required)
+  - [x] Subject (Minimum number of characters is 3, required)
+  - [x] Email (Must be a valid email address, required)
+  - [x] Body (Minimum number of characters is 3, required)
+  - [x] Submit button
+  - [x] console.log the data from the form once validation requirements are met.
+- [x] Once your project is done, deploy it to Netlify.
+
+Additional Goals:
+
+- [ ] Add sorting to Home page products.
+- [ ] Add filtering by category to Home page products.
+- [ ] Add profile page.
+  - [ ] Add user order history.
+- [ ] Add about page.
 
 # Getting Started with Create React App
 
