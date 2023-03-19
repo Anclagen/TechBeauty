@@ -72,6 +72,7 @@ export const QuantityButton = styled.button`
   font-weight: 600;
   padding: 0.5rem;
   text-align: center;
+  transition: all 0.5s;
 
   :hover {
     background-color: ${({ theme }) => theme.color.secondary};
@@ -83,6 +84,18 @@ export const QuantityButton = styled.button`
 export const RemoveButton = styled(QuantityButton)`
   float: right;
   width: auto;
+`;
+
+export const ClearCartButton = styled(RemoveButton)`
+  margin: 1rem;
+  background-color: darkred;
+  color: white;
+  border: 1px solid darkred;
+  :hover {
+    border: 1px solid darkred;
+    color: black;
+    background-color: ${({ theme }) => theme.color.light};
+  }
 `;
 
 export const CartCheckoutSection = styled.section`

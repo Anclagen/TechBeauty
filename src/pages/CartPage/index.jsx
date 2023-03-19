@@ -14,6 +14,7 @@ import {
   CartCheckoutButton,
   EmptyCart,
   ReturnButton,
+  ClearCartButton,
 } from "./styles";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../context/cartSlice";
@@ -69,7 +70,7 @@ function CartPage() {
               </CartItemDetailsContainer>
             </CartItemContainer>
           ))}
-          <button onClick={() => dispatch(clearCart())}>Empty Cart</button>
+          <ClearCartButton onClick={() => dispatch(clearCart())}>Empty Cart</ClearCartButton>
         </section>
         <CartCheckoutSection>
           <CartCheckoutDetails>
