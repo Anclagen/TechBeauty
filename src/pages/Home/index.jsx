@@ -17,8 +17,9 @@ export default function Home() {
   updateHead("TechBeauty | Home", "TechBeauty an e-commerce website, selling a range of items from beauty and fashion product to audio and computer equipment.");
   const { data, isLoading, isError } = useSelector((state) => state.products);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filterHeading, setFilterHeading] = useState("All Products");
   const [sortedProducts, setSortedProducts] = useState([]);
-  const [sortValue, setSortValue] = useState("default");
+  const [sortValue, setSortValue] = useState("");
   Products();
 
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function Home() {
   const onChangeFilter = (event) => {
     const value = event.target.value;
     const filtered = filterProducts(data, value);
+    setFilterHeading(value.charAt(0).toUpperCase() + value.slice(1));
     setFilteredProducts(filtered);
     setSortedProducts(sortProducts(filtered, sortValue));
   };
@@ -48,11 +50,10 @@ export default function Home() {
       <Search />
       <PageWrapper>
         <FilterContainer>
-          <h2>All Products</h2>
-
+          <h2>Now Viewing {filterHeading}</h2>
           <HiddenLabel>Categories</HiddenLabel>
           <Filter onChange={onChangeFilter} disabled={isLoading}>
-            <option value="default" defaultValue>
+            <option value="All Products" defaultValue>
               All Categories
             </option>
             <FilterCategoryOptions data={data} isLoading={isLoading} isError={isError} />
@@ -62,11 +63,11 @@ export default function Home() {
             <option value="default" defaultValue>
               Sort Order
             </option>
-            <option value="price-high">Price, High-Low</option>
-            <option value="price-low">Price, Low-High</option>
-            <option value="rating">Rating, Highest Rated</option>
-            <option value="az">Name, A-Z</option>
-            <option value="za">Name, Z-A</option>
+            <option value="price-high">Price High-Low</option>
+            <option value="price-low">Price Low-High</option>
+            <option value="rating">Highest Rated</option>
+            <option value="az">Name A-Z</option>
+            <option value="za">Name Z-A</option>
           </Filter>
         </FilterContainer>
         <ProductsGrid data={sortedProducts} isLoading={isLoading} isError={isError} />

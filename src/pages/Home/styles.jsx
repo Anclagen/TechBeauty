@@ -35,11 +35,16 @@ export const FilterContainer = styled.div`
     max-width: 1750px;
   }
 `;
+
 export const Filter = styled.select`
   font-size: 1.25rem;
-  margin: 1rem;
-  margin-top: 0;
-  min-width: 230px;
+  border-radius: 1rem;
+  margin: 0 1rem 1rem auto;
+  min-width: 180px;
+  border-color: ${({ theme }) => theme.color.secondary};
+  background-color: ${({ theme }) => theme.color.tertiary};
+  padding-left: 1rem;
+  float: right;
 `;
 
 export const HiddenLabel = styled.label`

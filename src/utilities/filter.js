@@ -1,5 +1,5 @@
 export const filterProducts = function (products, filterValue) {
-  if (filterValue === "default") {
+  if (filterValue === "All Products") {
     return products;
   }
 

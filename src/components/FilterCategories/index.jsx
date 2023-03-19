@@ -7,7 +7,7 @@ export default function FilterCategoryOptions({ isLoading, isError, data }) {
     <>
       {categories.map((category, i) => (
         <option key={i} value={category}>
-          {category}
+          {category.charAt(0).toUpperCase() + category.slice(1)}
         </option>
       ))}
     </>
