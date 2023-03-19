@@ -4,7 +4,7 @@ import cartImage from "../../../assets/shopping_cart.png";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
-export default function Cart() {
+export default function Cart({ current }) {
   //get cart
   const cart = useSelector((state) => state.cart);
 
@@ -15,7 +15,7 @@ export default function Cart() {
 
   return (
     <CartIcon>
-      <CartLink to="/cart" total={cart.totalItems}>
+      <CartLink current={current === "/cart"} to="/cart" total={cart.totalItems}>
         <CartImage src={cartImage} alt="cart icon" /> Cart
       </CartLink>
       <CartItemsList>

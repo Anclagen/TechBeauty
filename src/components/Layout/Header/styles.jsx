@@ -51,7 +51,7 @@ export const NavLinks = styled(Link)`
   padding: 0.5rem;
   font-size: ${({ theme }) => theme.textSize.nav};
   color: white;
-  text-decoration: none;
+  text-decoration: ${(props) => (props.current ? "underline" : "none")};
   list-style-type: none;
   display: flex;
   flex-direction: column;

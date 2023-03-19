@@ -18,7 +18,7 @@ export const CartLink = styled(Link)`
   position: relative;
   font-size: ${({ theme }) => theme.textSize.nav};
   color: white;
-  text-decoration: none;
+  text-decoration: ${(props) => (props.current ? "underline" : "none")};
   list-style-type: none;
   display: flex;
   justify-content: center;
