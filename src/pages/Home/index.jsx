@@ -7,22 +7,7 @@ import Products from "../../hooks/Product";
 import ProductsGrid from "../../components/ProductsGrid";
 import { filterProducts } from "../../utilities/filter";
 import { sortProducts } from "../../utilities/sort";
-
-function FilterOption({ isLoading, isError, data }) {
-  if (isLoading || isError) {
-    return "";
-  }
-  const categories = [...new Set(data.flatMap((product) => product.tags))];
-  return (
-    <>
-      {categories.map((category, i) => (
-        <option key={i} value={category}>
-          {category}
-        </option>
-      ))}
-    </>
-  );
-}
+import FilterCategoryOptions from "../../components/FilterCategories";
 
 /**
  * Creates the homepage
@@ -70,7 +55,7 @@ export default function Home() {
             <option value="default" defaultValue>
               All Categories
             </option>
-            <FilterOption data={data} isLoading={isLoading} isError={isError} />
+            <FilterCategoryOptions data={data} isLoading={isLoading} isError={isError} />
           </Filter>
           <HiddenLabel>Sort Order</HiddenLabel>
           <Filter onChange={onChangeSort} disabled={isLoading}>
