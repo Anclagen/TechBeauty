@@ -33,6 +33,7 @@ export default function Home() {
   const { data, isLoading, isError } = useSelector((state) => state.products);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
+  const [sortValue, setSortValue] = useState("default");
   Products();
 
   useEffect(() => {
@@ -46,13 +47,14 @@ export default function Home() {
     const value = event.target.value;
     const filtered = filterProducts(data, value);
     setFilteredProducts(filtered);
-    setSortedProducts(sortProducts(filtered));
+    setSortedProducts(sortProducts(filtered, sortValue));
   };
 
   const onChangeSort = (event) => {
     const value = event.target.value;
     const sorted = sortProducts(filteredProducts, value);
     setSortedProducts(sorted);
+    setSortValue(value);
   };
 
   return (
