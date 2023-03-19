@@ -43,8 +43,8 @@ Core Requirements:
 
 Additional Goals:
 
-- [ ] Add sorting to Home page products.
-- [ ] Add filtering by category to Home page products.
+- [x] Add sorting to Home page products.
+- [x] Add filtering by category to Home page products.
 - [ ] Add profile page.
   - [ ] Add user order history.
 - [ ] Add about page.
