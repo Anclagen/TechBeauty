@@ -1,6 +1,5 @@
 export const sortProducts = function (data, value) {
   let filteredData = [...data];
-  console.log(filteredData);
   let sortedData;
   switch (value) {
     case "price-high":
