@@ -4,11 +4,11 @@ import { ProductGrid } from "./styles";
 
 /**
  * Returns grid of product cards
- * @param {props} props {isloading, isError, data}
+ * @param {props} props {isLoading, isError, data}
  * @example
  * <ProductsGrid data={data} isLoading={isLoading} isError={isError} />
  */
-export default function ProductsGrid({ isLoading, isError, data }) {
+export default function ProductsGrid({ isLoading, isError, data = [] }) {
   if (isLoading) {
     return (
       <ProductGrid>

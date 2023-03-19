@@ -1,9 +1,28 @@
+import { useState, useEffect } from "react";
 import { HomeHeading, PageWrapper, Main, FilterContainer, Filter, HiddenLabel } from "./styles";
 import { updateHead } from "../../utilities/updateHead";
 import Search from "../../components/Search";
 import { useSelector } from "react-redux";
 import Products from "../../hooks/Product";
 import ProductsGrid from "../../components/ProductsGrid";
+import { filterProducts } from "../../utilities/filter";
+import { sortProducts } from "../../utilities/sort";
+
+function FilterOption({ isLoading, isError, data }) {
+  if (isLoading || isError) {
+    return "";
+  }
+  const categories = [...new Set(data.flatMap((product) => product.tags))];
+  return (
+    <>
+      {categories.map((category, i) => (
+        <option key={i} value={category}>
+          {category}
+        </option>
+      ))}
+    </>
+  );
+}
 
 /**
  * Creates the homepage
@@ -12,7 +31,29 @@ import ProductsGrid from "../../components/ProductsGrid";
 export default function Home() {
   updateHead("TechBeauty | Home", "TechBeauty an e-commerce website, selling a range of items from beauty and fashion product to audio and computer equipment.");
   const { data, isLoading, isError } = useSelector((state) => state.products);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [sortedProducts, setSortedProducts] = useState([]);
   Products();
+
+  useEffect(() => {
+    if (!isLoading && !isError) {
+      setFilteredProducts(data);
+      setSortedProducts(data);
+    }
+  }, [isLoading, isError, data]);
+
+  const onChangeFilter = (event) => {
+    const value = event.target.value;
+    const filtered = filterProducts(data, value);
+    setFilteredProducts(filtered);
+    setSortedProducts(sortProducts(filtered));
+  };
+
+  const onChangeSort = (event) => {
+    const value = event.target.value;
+    const sorted = sortProducts(filteredProducts, value);
+    setSortedProducts(sorted);
+  };
 
   return (
     <Main>
@@ -23,20 +64,25 @@ export default function Home() {
           <h2>All Products</h2>
 
           <HiddenLabel>Categories</HiddenLabel>
-          <Filter>
-            <option defaultValue>All Categories</option>
+          <Filter onChange={onChangeFilter} disabled={isLoading}>
+            <option value="default" defaultValue>
+              All Categories
+            </option>
+            <FilterOption data={data} isLoading={isLoading} isError={isError} />
           </Filter>
           <HiddenLabel>Sort Order</HiddenLabel>
-          <Filter>
-            <option defaultValue>Sort Order</option>
-            <option>Price, High-Low</option>
-            <option>Price, Low-High</option>
-            <option>Rating, Highest Rated</option>
-            <option>Name, A-Z</option>
-            <option>Name, Z-A</option>
+          <Filter onChange={onChangeSort} disabled={isLoading}>
+            <option value="default" defaultValue>
+              Sort Order
+            </option>
+            <option value="price-high">Price, High-Low</option>
+            <option value="price-low">Price, Low-High</option>
+            <option value="rating">Rating, Highest Rated</option>
+            <option value="az">Name, A-Z</option>
+            <option value="za">Name, Z-A</option>
           </Filter>
         </FilterContainer>
-        <ProductsGrid data={data} isLoading={isLoading} isError={isError} />
+        <ProductsGrid data={sortedProducts} isLoading={isLoading} isError={isError} />
       </PageWrapper>
     </Main>
   );
