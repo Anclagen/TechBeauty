@@ -30,7 +30,7 @@ Core Requirements:
 - [x] CheckoutSuccess Page
   - [x] The Checkout success page will display a message to the user notifying them that their order was successful.
   - [x] There should also be a link that lets a user go back to the store.
-        = [x] The cart must be cleared if the user gets to the Checkout success page.
+  - [x] The cart must be cleared if the user gets to the Checkout success page.
 - [x] Contact Page
   - Requirements:
   - [x] Full name (Minimum number of characters is 3, required)
