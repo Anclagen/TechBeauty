@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //import { HeaderStyles, Navigation, NavLinks, MainLinksContainer, ThemeCartContainer, ThemeToggle } from "./styles";
-import { HeaderStyles, Navigation, NavLinks, MainLinksContainer, ThemeCartContainer } from "./styles";
+import { HeaderStyles, Navigation, NavLinks, MainLinksContainer, ThemeCartContainer, NavSkip } from "./styles";
 import Cart from "../Cart";
 import Logo from "../Logo";
 import HamburgerMenu from "../HamburgerMenu";
@@ -23,6 +23,7 @@ export default function Header() {
   return (
     <HeaderStyles display={display} open={open}>
       <Navigation>
+        <NavSkip href="#main">Skip to Main Content</NavSkip>
         <Logo />
         <HamburgerMenu onClick={() => onButtonClick()} open={open} />
         <MainLinksContainer display={display}>

@@ -27,7 +27,7 @@ function CartPage() {
   if (cart.products.length === 0) {
     return (
       <EmptyCart>
-        <h1>Empty Cart</h1>
+        <h1 id="main">Empty Cart</h1>
         <p>Nothing in your cart.</p>
         <ReturnButton to="/">Return to Store</ReturnButton>
       </EmptyCart>
@@ -36,7 +36,7 @@ function CartPage() {
 
   return (
     <Wrapper>
-      <h1>Your Cart</h1>
+      <h1 id="main">Your Cart</h1>
       <CartGrid>
         <section>
           <h2>Products</h2>

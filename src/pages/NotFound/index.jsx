@@ -1,11 +1,12 @@
 import { updateHead } from "../../utilities/updateHead";
-import { Wrapper } from "./styles";
+import { Wrapper, NotFoundLinkButton } from "./styles";
 
 function NotFound() {
   updateHead("404 - Page Not Found", "This pages doesn't really exist.....");
   return (
-    <Wrapper>
-      <p>Notfound</p>
+    <Wrapper id="main">
+      <h1>Page Not found</h1>
+      <NotFoundLinkButton to="/">Return To Store</NotFoundLinkButton>
     </Wrapper>
   );
 }

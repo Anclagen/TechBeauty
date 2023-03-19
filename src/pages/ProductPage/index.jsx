@@ -41,7 +41,7 @@ function ProductPage() {
   updateHead(data.title, data.description);
   return (
     <Wrapper>
-      <Heading1>{data.title}</Heading1>
+      <Heading1 id="main">{data.title}</Heading1>
       <RatingLink href="#reviews">
         <RatingStars rating={data.rating} reviews={data.reviews} />
       </RatingLink>

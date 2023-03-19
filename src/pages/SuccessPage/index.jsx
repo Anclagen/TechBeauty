@@ -37,7 +37,7 @@ function SuccessPage() {
   if (products.length === 0 && order.products.length === 0) {
     return (
       <SuccessPageWrapper>
-        <h1>No Order Found</h1>
+        <h1 id="main">No Order Found</h1>
         <ReturnButton to="/">Return To Store</ReturnButton>
       </SuccessPageWrapper>
     );
@@ -45,7 +45,7 @@ function SuccessPage() {
 
   return (
     <SuccessPageWrapper>
-      <h1>Order Successful</h1>
+      <h1 id="main">Order Successful</h1>
       <span>
         Order ID: <OrderNumber>{order.orderNumber}</OrderNumber>
       </span>

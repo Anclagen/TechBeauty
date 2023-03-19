@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <Main>
-      <HomeHeading>Welcome To TechBeauty</HomeHeading>
+      <HomeHeading id="main">Welcome To TechBeauty</HomeHeading>
       <Search />
       <PageWrapper>
         <FilterContainer>

@@ -39,7 +39,7 @@ function ContactPage() {
   return (
     <main>
       <ContactForm onSubmit={handleSubmit(onSubmit)}>
-        <h1>Contact Us</h1>
+        <h1 id="main">Contact Us</h1>
         <ContactInputContainer>
           <ContactLabel htmlFor="full-name">Full Name</ContactLabel>
           <ContactInput id="full-name" {...register("fullName")} />

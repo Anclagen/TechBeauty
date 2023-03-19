@@ -7,7 +7,6 @@ const openNavAnimation = keyframes`
 `;
 
 export const HeaderStyles = styled.header`
-  position: relative;
   background-color: ${({ theme }) => theme.color.primary};
   box-shadow: 0px 3px 10px ${({ theme }) => theme.color.secondary};
   min-height: 85px;
@@ -17,6 +16,7 @@ export const HeaderStyles = styled.header`
 `;
 
 export const Navigation = styled.nav`
+  position: relative;
   font-size: 18px;
   padding-bottom: 10px;
   @media (min-width: 805px) {
@@ -102,4 +102,23 @@ export const CartIcon = styled(Link)`
 
 export const CartImage = styled.img`
   width: 60px;
+`;
+
+export const NavSkip = styled.a`
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: -200px;
+  overflow: hidden;
+  border: 2px solid ${({ theme }) => theme.color.secondary};
+  background-color: ${({ theme }) => theme.color.primary};
+  padding: 5px;
+  transition: 0.5s;
+  z-index: 1000;
+  padding: 1rem;
+
+  :focus {
+    top: 0px;
+    position: absolute;
+  }
 `;
