@@ -26,16 +26,16 @@ export default function Header() {
         <Logo />
         <HamburgerMenu onClick={() => onButtonClick()} open={open} />
         <MainLinksContainer display={display}>
-          <NavLinks current={currentLocation === "/"} to="/">
+          <NavLinks current={currentLocation === "/" ? "underline" : "none"} to="/">
             Home
           </NavLinks>
-          <NavLinks current={currentLocation === "/contact"} to="/contact">
+          <NavLinks current={currentLocation === "/contact" ? "underline" : "none"} to="/contact">
             Contact
           </NavLinks>
         </MainLinksContainer>
         <ThemeCartContainer>
           {/* <ThemeToggle src={moonIcon} /> */}
-          <Cart current={currentLocation} />
+          <Cart currentLocation={currentLocation} />
         </ThemeCartContainer>
       </Navigation>
     </HeaderStyles>
