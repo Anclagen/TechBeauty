@@ -8,6 +8,9 @@ import { useLocation } from "react-router-dom";
 //import moonIcon from "../../../assets/moon_icon.jpg";
 //import sunIcon from "../../../assets/sun_icon.jpg";
 
+/**
+ * Header component for page, containing navigation.
+ */
 export default function Header() {
   const [display, toggleOpen] = useState("none");
   const [open, setOpen] = useState(false);

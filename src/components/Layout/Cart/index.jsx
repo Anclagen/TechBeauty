@@ -4,6 +4,10 @@ import cartImage from "../../../assets/shopping_cart.png";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
+/**
+ * Creates the cart icon for the nav bar and also has useEffect to update local storage on cart change.
+ * @param {String} currentPage used for current page indicators
+ */
 export default function Cart({ currentLocation }) {
   //get cart
   const cart = useSelector((state) => state.cart);

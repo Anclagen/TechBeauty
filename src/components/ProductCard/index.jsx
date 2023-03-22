@@ -2,8 +2,12 @@ import React from "react";
 import { ProductContainer, ProductHeading, ProductImage, ProductLink, ProductImageContainer, ProductSaleBanner } from "./styles";
 import { RatingStars } from "../RatingStars/";
 
+/**
+ * Creates a product card for a specific product.
+ * @param {Object} product The product details
+ * @returns
+ */
 export default function ProductCard({ product }) {
-  //const {id, title, imageUrl, price, discountedPrice, rating, tags, reviews, description} = product
   const { id, title, imageUrl, price, discountedPrice, rating, reviews } = product;
   return (
     <ProductContainer>

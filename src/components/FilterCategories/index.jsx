@@ -1,4 +1,11 @@
-export default function FilterCategoryOptions({ isLoading, isError, data }) {
+/**
+ * Takes an array of data and creates drop down options for the tags.
+ * @param {Boolean} isLoading Check for if the data has been fetched
+ * @param {Boolean} isError Check for if there was an error with the request
+ * @param {Array} data Array of products
+ * @returns
+ */
+export default function FilterCategoryOptions({ isLoading, isError, data = [] }) {
   if (isLoading || isError) {
     return "";
   }
