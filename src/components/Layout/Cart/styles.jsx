@@ -63,12 +63,11 @@ export const CartItemsList = styled.div`
   border: 2px solid ${({ theme }) => theme.color.secondary};
   z-index: 100;
 
-  ${CartIcon}:hover & {
-    display: block;
-  }
-
   @media (min-width: 805px) {
     width: 450px;
+    ${CartIcon}:hover & {
+      display: block;
+    }
   }
 `;
 
