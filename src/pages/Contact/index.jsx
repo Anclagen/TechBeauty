@@ -1,22 +1,22 @@
 import { updateHead } from "../../utilities/updateHead";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { ContactForm, ContactLabel, ContactInput, ContactTextArea, ContactSubmit, ContactErrorReporting, ContactInputContainer } from "./styles";
+import { ContactSuccess, ContactForm, ContactLabel, ContactInput, ContactTextArea, ContactSubmit, ContactErrorReporting, ContactInputContainer, ContactReturnButton } from "./styles";
 
 const schema = yup
   .object({
-    fullName: yup.string().min(3, "Full name is required and must be at least 3 characters.").required(),
-    Subject: yup.string().min(3, "Subject is required and must be at least 3 characters.").required(),
-    Email: yup.string().email().required(),
-    Body: yup.string().min(3, "Message is required and must be at least 3 characters.").required(),
+    fullName: yup.string().trim().min(3, "Full name is required and must be at least 3 characters.").required(),
+    Subject: yup.string().trim().min(3, "Subject is required and must be at least 3 characters.").required(),
+    Email: yup.string().trim().email().required(),
+    Body: yup.string().trim().min(3, "Message is required and must be at least 3 characters.").required(),
   })
   .required();
 
 function ContactPage() {
   updateHead("Contact Us", "Contact TechBeauty with your queries, concerns and suggestions.");
-
+  const [success, setSuccess] = useState(false);
   const {
     register,
     handleSubmit,
@@ -28,6 +28,7 @@ function ContactPage() {
 
   function onSubmit(data) {
     console.log(data);
+    setSuccess(true);
   }
 
   useEffect(() => {
@@ -35,6 +36,22 @@ function ContactPage() {
       reset();
     }
   }, [isSubmitSuccessful, reset]);
+
+  if (success) {
+    return (
+      <main>
+        <ContactForm onSubmit={handleSubmit(onSubmit)}>
+          <h1 id="main">Contact Us</h1>
+          <ContactSuccess>Submitted Successfully</ContactSuccess>
+          <p>
+            Thank you for contacting us. Your message has been received and we will respond to you as soon as possible. We appreciate your interest in our services and look forward to connecting with
+            you.
+          </p>
+          <ContactReturnButton to="/">Return to store</ContactReturnButton>
+        </ContactForm>
+      </main>
+    );
+  }
 
   return (
     <main>

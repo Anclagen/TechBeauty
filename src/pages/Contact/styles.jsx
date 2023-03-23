@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StandardButton } from "../../components/styles/Button.styles";
+import { StandardButton, StandardButtonLink } from "../../components/styles/Button.styles";
 
 export const ContactForm = styled.form`
   display: flex;
@@ -47,4 +47,17 @@ export const ContactErrorReporting = styled.p`
 export const ContactSubmit = styled(StandardButton)`
   width: 100%;
   font-size: 1.25rem;
+`;
+
+export const ContactSuccess = styled.div`
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: darkgreen;
+  margin: 1rem 0;
+`;
+
+export const ContactReturnButton = styled(StandardButtonLink)`
+  align-self: center;
+  margin-top: 2rem;
 `;
