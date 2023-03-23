@@ -8,7 +8,7 @@ import { useEffect } from "react";
  * Creates the cart icon for the nav bar and also has useEffect to update local storage on cart change.
  * @param {String} currentPage used for current page indicators
  */
-export default function Cart({ currentLocation }) {
+export default function Cart() {
   //get cart
   const cart = useSelector((state) => state.cart);
 
@@ -19,8 +19,8 @@ export default function Cart({ currentLocation }) {
 
   return (
     <CartIcon>
-      <CartLink current={currentLocation === "/cart" ? "underline" : "none"} to="/cart" total={cart.totalItems}>
-        <CartImage src={cartImage} alt="cart icon" /> Cart
+      <CartLink to="/cart" total={cart.totalItems}>
+        <CartImage src={cartImage} alt="cart icon" />
       </CartLink>
       <CartItemsList>
         {cart.products.length > 0

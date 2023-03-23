@@ -26,7 +26,7 @@ export const CartLink = styled(Link)`
 
   :after {
     content: "${(props) => props.total}";
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: ${({ theme }) => theme.color.secondary};
     display: flex;
@@ -36,17 +36,17 @@ export const CartLink = styled(Link)`
     flex-direction: column;
     border-radius: 50%;
     position: absolute;
-    top: 40%;
-    left: 15%;
-    width: 30px;
-    height: 30px;
+    top: 45%;
+    left: 25%;
+    width: 25px;
+    height: 25px;
     background-color: ${({ theme }) => theme.color.primary};
     border: 1px solid ${({ theme }) => theme.color.secondary};
   }
 `;
 
 export const CartImage = styled.img`
-  width: 60px;
+  width: 50px;
 `;
 
 export const CartItemsList = styled.div`

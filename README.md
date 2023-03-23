@@ -46,6 +46,7 @@ Additional Goals:
 - [x] Add sorting to Home page products.
 - [x] Add filtering by category to Home page products.
 - [ ] Related products on product specific page.
+- [ ] Added to cart animation/popup
 - [ ] Expand checkout workflow.
 - [ ] Add profile page.
   - [ ] Add user order history.
