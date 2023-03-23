@@ -31,11 +31,19 @@ function ProductPage() {
   const { data, isLoading, isError } = useAPI(baseURL + params.id);
 
   if (isLoading) {
-    return <div>Loading</div>;
+    return (
+      <Wrapper>
+        <Heading1 id="main">Loading Product.....</Heading1>
+      </Wrapper>
+    );
   }
 
   if (isError) {
-    return <div>An Error Occurred Fetching The Data.</div>;
+    return (
+      <Wrapper>
+        <Heading1 id="main">An error occurred, refresh and try again or check the product still exists.</Heading1>
+      </Wrapper>
+    );
   }
 
   updateHead(data.title, data.description);
