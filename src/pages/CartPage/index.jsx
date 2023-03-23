@@ -47,7 +47,8 @@ function CartPage() {
               </CartItemImageContainer>
               <CartItemDetailsContainer>
                 <CartItemTitle>{item.title}</CartItemTitle>
-                <p>Price: {item.discountedPrice.toFixed(2)}</p>
+                <p>Unit Price: {item.discountedPrice.toFixed(2)} kr</p>
+                <p>Total Price: {(item.discountedPrice * item.quantity).toFixed(2)} kr</p>
                 <p>Quantity:</p>
                 <p>
                   <QuantityButton
