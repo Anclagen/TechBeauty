@@ -19,20 +19,20 @@ const getLocalHistory = () => {
 function SuccessPage() {
   updateHead("Checkout Success", "Your order has been successfully placed");
   const { products, total } = useSelector((state) => state.cart);
-  const [order, setOrder] = useState({ products: [], orderNumber: "" });
+  const [order, setOrder] = useState({ products: [], orderNumber: "", total: 0 });
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (products.length > 0) {
       const orderNumber = Date.now().toString(36) + Math.random().toString(36).substring(2);
-      const details = { products, orderNumber };
+      const details = { products, orderNumber, total };
       const orderHistory = getLocalHistory();
       orderHistory.push(details);
       localStorage.setItem("orderHistory", JSON.stringify(orderHistory));
       dispatch(clearCart());
       setOrder(details);
     }
-  }, [dispatch, products]);
+  }, [dispatch, products, total]);
 
   if (products.length === 0 && order.products.length === 0) {
     return (
@@ -64,7 +64,7 @@ function SuccessPage() {
                 <OrderSummaryLink>{product.title}</OrderSummaryLink>
               </td>
               <td>{product.quantity}</td>
-              <td>{product.discountedPrice}</td>
+              <td>{(product.discountedPrice * product.quantity).toFixed(2)}</td>
             </tr>
           ))}
         </tbody>
@@ -72,7 +72,7 @@ function SuccessPage() {
           <tr>
             <td></td>
             <td>Total</td>
-            <td>{total}</td>
+            <td>{order.total}</td>
           </tr>
         </tfoot>
       </Table>
