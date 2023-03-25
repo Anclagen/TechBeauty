@@ -56,6 +56,8 @@ function ProductPage() {
     if (cartItem.length > 0) {
       setInCart(true);
       setCartItem(cartItem);
+    } else {
+      setInCart(false);
     }
   }, [cart.products, params.id]);
 
