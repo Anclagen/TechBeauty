@@ -4,9 +4,10 @@ import { StandardButton } from "../../components/styles/Button.styles";
 export const Wrapper = styled.main`
   margin: 90px auto 2rem auto;
   padding: 0 1rem;
-  max-width: 1100px;
+  width: 90vw;
   @media (min-width: 700px) {
     padding: 0 2rem;
+    max-width: 1100px;
   }
 `;
 
@@ -28,11 +29,10 @@ export const RatingLink = styled.a`
 export const PageGrid = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 1fr);
   grid-gap: 2rem;
   margin: 0 auto;
   @media (min-width: 700px) {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
