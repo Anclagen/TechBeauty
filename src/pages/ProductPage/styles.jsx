@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { StandardButton } from "../../components/styles/Button.styles";
 
 export const Wrapper = styled.main`
@@ -118,4 +118,26 @@ export const IconImage = styled.img`
 export const Divider = styled.hr`
   color: ${({ theme }) => theme.color.secondary};
   margin: 2rem 0;
+`;
+
+const slideIn = keyframes`
+  0% {top: -100px;}
+  40% { top: 150px;}
+  60% { top: 150px;}
+  100% { top: -100px;}
+`;
+
+export const Popup = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: darkgreen;
+  color: white;
+  font-size: 1.25rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: ${slideIn} 3s ease-out forwards;
 `;
