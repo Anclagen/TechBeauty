@@ -1,9 +1,16 @@
 import styled from "styled-components";
+import bannerImage from "../../assets/banner.jpg";
 
 export const SearchContainer = styled.div`
   position: relative;
   width: 100%;
   background-color: lightgrey;
+  background-image: url(${bannerImage});
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  background-size: cover;
 `;
 
 export const Banner = styled.img`

@@ -1,9 +1,8 @@
-import { SearchInput, Banner, SearchContainer, HiddenLabel, AutoComplete, NoResult, ResultContainer } from "./styles";
-import bannerImage from "../../assets/banner.jpg";
-import { search } from "../../utilities/search";
+import { SearchInput, SearchContainer, HiddenLabel, AutoComplete, NoResult, ResultContainer } from "./styles";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import SearchItem from "../SearchItem";
+import { search } from "../../utilities/search";
 
 /**
  * This creates a search input, with dropdown links to items related to input.
@@ -24,7 +23,6 @@ export default function Search() {
 
   return (
     <SearchContainer>
-      <Banner src={bannerImage} alt="Heart shaped mechanical clock" />
       <HiddenLabel htmlFor="search">Search Input</HiddenLabel>
       <SearchInput id="search" placeholder="Search TechBeauty." type="search" autoComplete="off" disabled={isLoading} onChange={onInputQuery} value={query} />
       <AutoComplete>
