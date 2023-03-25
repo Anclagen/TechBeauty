@@ -4,7 +4,7 @@ import Layout from "./components/Layout";
 import GlobalStyle from "./components/styles/Global.styles";
 import theme from "./components/styles/Themes.styles";
 import { ThemeProvider } from "styled-components";
-import { Home, ProductPage, CartPage, SuccessPage, ContactPage, NotFound } from "./pages";
+import { Home, ProductPage, CartPage, SuccessPage, ContactPage, NotFound, AboutPage } from "./pages";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
             <Route path="cart" element={<CartPage />} />
             <Route path="success" element={<SuccessPage />} />
             <Route path="contact" element={<ContactPage />} />
+            <Route path="about" element={<AboutPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

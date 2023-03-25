@@ -11,7 +11,7 @@ export default function Footer() {
         <FooterLinks to="/">Home</FooterLinks>
         <FooterLinks to="/contact">Contact</FooterLinks>
         <FooterLinks to="/cart">Cart</FooterLinks>
-        {/* <FooterLinks to="/about">About</FooterLinks> */}
+        <FooterLinks to="/about">About</FooterLinks>
       </div>
       <div>
         <p>Copyright &#169; TechBeauty 2023 </p>

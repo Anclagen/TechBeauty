@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 const openNavAnimation = keyframes`
   0% {height: 0px}
-  100%{height: 87px}
+  100%{height: 130px}
 `;
 
 export const HeaderStyles = styled.header`

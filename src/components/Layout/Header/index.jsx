@@ -36,6 +36,9 @@ export default function Header() {
           <NavLinks current={currentLocation === "/contact" ? "underline" : "none"} to="/contact">
             Contact
           </NavLinks>
+          <NavLinks current={currentLocation === "/about" ? "underline" : "none"} to="/about">
+            About
+          </NavLinks>
         </MainLinksContainer>
         <ThemeCartContainer>
           {/* <ThemeToggle src={moonIcon} /> */}
