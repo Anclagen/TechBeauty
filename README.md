@@ -50,7 +50,6 @@ Additional Goals:
 - [ ] Expand checkout workflow.
 - [ ] Add profile page.
   - [ ] Add user order history.
-  - [ ] Add favourites.
 - [x] Add about page.
 
 # Getting Started with Create React App

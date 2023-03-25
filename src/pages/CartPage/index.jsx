@@ -92,8 +92,3 @@ function CartPage() {
 }
 
 export default CartPage;
-/*
-<button onClick={() => dispatch(removeFromCart({ product: data }))}>remove</button>
-<button onClick={() => dispatch(decreaseQuantity({ quantity: 1, product: data }))}>decrease</button>
-<button onClick={() => dispatch(clearCart())}>clear</button>
-*/
