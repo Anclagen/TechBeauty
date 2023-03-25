@@ -49,16 +49,8 @@ function CartPage() {
                 <CartItemTitle>{item.title}</CartItemTitle>
                 <p>Unit Price: {item.discountedPrice.toFixed(2)} kr</p>
                 <p>Total Price: {(item.discountedPrice * item.quantity).toFixed(2)} kr</p>
-                <p>Quantity:</p>
                 <p>
-                  <QuantityButton
-                    onClick={() => {
-                      dispatch(decreaseQuantity({ quantity: 1, product: item }));
-                    }}
-                  >
-                    -
-                  </QuantityButton>
-                  <span> {item.quantity} </span>
+                  Quantity:
                   <QuantityButton
                     onClick={() => {
                       dispatch(addToCart({ quantity: 1, product: item }));
@@ -66,8 +58,16 @@ function CartPage() {
                   >
                     +
                   </QuantityButton>
-                  <RemoveButton onClick={() => dispatch(removeFromCart({ product: item }))}>remove</RemoveButton>
+                  <span> {item.quantity} </span>
+                  <QuantityButton
+                    onClick={() => {
+                      dispatch(decreaseQuantity({ quantity: 1, product: item }));
+                    }}
+                  >
+                    -
+                  </QuantityButton>
                 </p>
+                <RemoveButton onClick={() => dispatch(removeFromCart({ product: item }))}>remove</RemoveButton>
               </CartItemDetailsContainer>
             </CartItemContainer>
           ))}

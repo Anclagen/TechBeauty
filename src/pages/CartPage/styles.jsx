@@ -82,8 +82,17 @@ export const QuantityButton = styled.button`
 `;
 
 export const RemoveButton = styled(QuantityButton)`
+  background-color: #c78080;
+  border: 1px solid darkred;
   float: right;
   width: auto;
+  margin-bottom: 0.5rem;
+  :hover {
+    color: white;
+    background-color: darkred;
+    border: 1px solid #c78080;
+    cursor: pointer;
+  }
 `;
 
 export const ClearCartButton = styled(RemoveButton)`
