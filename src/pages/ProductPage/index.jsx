@@ -23,6 +23,7 @@ import {
 } from "./styles";
 import cartIcon from "../../assets/shopping_cart_add.png";
 import { RatingStars } from "../../components/RatingStars";
+import ProductPageLoader from "../../components/ProductPageLoader";
 
 function ProductPage() {
   //const cart = useSelector((state) => state.cart);
@@ -34,6 +35,12 @@ function ProductPage() {
     return (
       <Wrapper>
         <Heading1 id="main">Loading Product.....</Heading1>
+        <RatingLink>
+          <RatingStars rating={0} reviews={[]} />
+        </RatingLink>
+        <PageGrid>
+          <ProductPageLoader />
+        </PageGrid>
       </Wrapper>
     );
   }
