@@ -121,10 +121,10 @@ export const Divider = styled.hr`
 `;
 
 const slideIn = keyframes`
-  0% {top: -100px;}
-  40% { top: 150px;}
-  60% { top: 150px;}
-  100% { top: -100px;}
+  0% {top: 0px;}
+  30% { top: 170px;}
+  70% { top: 170px;}
+  100% { top: 0px;}
 `;
 
 export const Popup = styled.div`
@@ -137,7 +137,7 @@ export const Popup = styled.div`
   font-size: 1.25rem;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  box-shadow: ${({ theme }) => theme.shadow.popup};
   animation: ${slideIn} 3s ease-out forwards;
 `;

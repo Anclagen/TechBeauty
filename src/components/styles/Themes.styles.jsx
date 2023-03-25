@@ -8,6 +8,7 @@ const theme = {
   },
   shadow: {
     cards: "0px 0px 10px grey",
+    popup: "0px 0px 10px #A97D36",
   },
   textSize: {
     nav: "1.5rem",
