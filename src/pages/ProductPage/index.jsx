@@ -21,11 +21,12 @@ import {
   CurrentPrice,
   PreviousPrice,
   PreviousPriceAmount,
-  Popup,
 } from "./styles";
 import cartIcon from "../../assets/shopping_cart_add.png";
 import { RatingStars } from "../../components/RatingStars";
+import PopupMessage from "../../components/Popup";
 import ProductPageLoader from "../../components/ProductPageLoader";
+import usePopup from "../../hooks/usePopup";
 
 /**
  * Creates Products page
@@ -36,21 +37,16 @@ function ProductPage() {
   const dispatch = useDispatch();
   const params = useParams();
   const { data, isLoading, isError } = useAPI(baseURL + params.id);
+  const { popups, showPopup } = usePopup();
   const [inCart, setInCart] = useState(false);
   const [cartItem, setCartItem] = useState({});
-  const [popups, setPopups] = useState([]);
 
+  // update the cart state
   const handleAddToCart = () => {
+    // add the product to the cart
     dispatch(addToCart({ quantity: 1, product: data }));
-
-    // keep track of the popup id so we can remove it after 3 seconds
-    const popupId = new Date().getTime();
-    // add the popup to the state
-    setPopups((prevPopups) => [...prevPopups, { id: popupId, message: "Added to cart!" }]);
-    // remove the popup after 3 seconds
-    setTimeout(() => {
-      setPopups((prevPopups) => prevPopups.filter((popup) => popup.id !== popupId));
-    }, 3000);
+    // show the popup
+    showPopup("Product added to cart");
   };
 
   // check if the product is already in the cart
@@ -78,7 +74,7 @@ function ProductPage() {
   }
 
   // if there is an error, show the error message
-  if (isError) {
+  if (isError || data.statusCode > 200) {
     return (
       <Wrapper>
         <Heading1 id="main">An error occurred, refresh and try again or check the product still exists.</Heading1>
@@ -87,7 +83,6 @@ function ProductPage() {
   }
 
   updateHead(data.title, data.description);
-
   return (
     <Wrapper>
       <Heading1 id="main">{data.title}</Heading1>
@@ -114,9 +109,7 @@ function ProductPage() {
           <Divider />
           {inCart ? <p>Already {cartItem[0].quantity} in your cart.</p> : ""}
           {popups.map((popup) => (
-            <Popup key={popup.id} className="popup">
-              <p>{popup.message}</p>
-            </Popup>
+            <PopupMessage key={popup.id} message={popup.message} />
           ))}
           <ButtonAddCart onClick={handleAddToCart}>
             <IconImage src={cartIcon} alt="cart icon" />
