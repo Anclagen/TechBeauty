@@ -1,5 +1,13 @@
 import { useState } from "react";
 
+/**
+ * Manages the state of popups  (e.g. "Added to cart")
+ * @returns {Object} popups: array of popups, showPopup: function to add a popup to the state
+ * @example
+ * const { popups, showPopup } = usePopup(); // in a component
+ *
+ * showPopup("Added to cart"); // to add a popup
+ */
 const usePopup = () => {
   const [popups, setPopups] = useState([]);
 

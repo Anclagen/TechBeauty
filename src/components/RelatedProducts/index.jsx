@@ -3,6 +3,11 @@ import Products from "../../hooks/Product";
 import { useSelector } from "react-redux";
 import { RelatedProductsGrid } from "./styles";
 
+/**
+ * Returns a grid of related products
+ * @param {Object} Product object containing product data
+ * @returns
+ */
 function RelatedProducts({ product }) {
   const { data, isLoading, isError } = useSelector((state) => state.products);
   Products();
