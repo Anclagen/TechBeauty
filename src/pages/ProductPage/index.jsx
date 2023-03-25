@@ -113,11 +113,6 @@ function ProductPage() {
           <CurrentPrice>Current Price: {data.discountedPrice < data.price ? `kr ${data.discountedPrice}, Save kr ${data.price - data.discountedPrice}` : "kr " + data.price}</CurrentPrice>
           <Divider />
           {inCart ? <p>Already {cartItem[0].quantity} in your cart.</p> : ""}
-          {/* {showPopup && (
-            <Popup>
-              <p>Added to cart!</p>
-            </Popup>
-          )} */}
           {popups.map((popup) => (
             <Popup key={popup.id} className="popup">
               <p>{popup.message}</p>
