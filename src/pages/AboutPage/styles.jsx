@@ -33,18 +33,17 @@ export const AboutHeader = styled.div`
 
   h1 {
     font-size: 1.5rem;
-
     padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.shadow.popup};
     text-align: center;
-    white-space: nowrap;
+    width: fit-content;
     position: absolute;
     background-color: ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.secondary};
     margin: 2rem;
     z-index: 10;
-    left: 49%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     @media (min-width: 700px) {
