@@ -27,6 +27,7 @@ import { RatingStars } from "../../components/RatingStars";
 import PopupMessage from "../../components/Popup";
 import ProductPageLoader from "../../components/ProductPageLoader";
 import usePopup from "../../hooks/usePopup";
+import RelatedProducts from "../../components/RelatedProducts";
 
 /**
  * Creates Products page
@@ -134,6 +135,9 @@ function ProductPage() {
           <p>No reviews yet.</p>
         )}
       </div>
+      <Divider />
+      <Heading2 id="reviews">Related Products</Heading2>
+      {data.id ? <RelatedProducts product={data} /> : ""}
     </Wrapper>
   );
 }

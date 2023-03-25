@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
         <ProductHeading>{title}</ProductHeading>
         <RatingStars rating={rating} reviews={reviews}></RatingStars>
         <p>Price: {price === discountedPrice ? `kr ${price}` : `kr ${discountedPrice}, save kr ${(price - discountedPrice).toFixed(2)}`}</p>
-        <ProductLink to={`product/${id}`}>View More</ProductLink>
+        <ProductLink to={`/product/${id}`}>View More</ProductLink>
       </div>
     </ProductContainer>
   );

@@ -1,10 +1,10 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { StandardButton } from "../../components/styles/Button.styles";
 
 export const Wrapper = styled.main`
   margin: 90px auto 2rem auto;
   padding: 0 1rem;
-  max-width: 1400px;
+  max-width: 1100px;
   @media (min-width: 700px) {
     padding: 0 2rem;
   }
@@ -52,7 +52,7 @@ export const ProductImage = styled.img`
   height: 400px;
   @media (min-width: 700px) {
     height: 40vw;
-    max-height: 600px;
+    max-height: 500px;
   }
 `;
 
@@ -68,9 +68,7 @@ export const ProductSaleBanner = styled.div`
   transform: rotate(-40deg);
 `;
 
-export const DetailsContainer = styled.div`
-  max-width: 500px;
-`;
+export const DetailsContainer = styled.div``;
 
 export const Heading2 = styled.h2`
   font-size: 1.25rem;
