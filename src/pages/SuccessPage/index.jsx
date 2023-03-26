@@ -72,7 +72,7 @@ function SuccessPage() {
           <tr>
             <td></td>
             <td>Total</td>
-            <td>{order.total}</td>
+            <td>NOK {order.total.toFixed(2)}</td>
           </tr>
         </tfoot>
       </Table>

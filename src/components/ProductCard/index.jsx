@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductContainer, ProductHeading, ProductImage, ProductLink, ProductImageContainer, ProductSaleBanner } from "./styles";
+import { ProductContainer, ProductHeading, ProductImage, ProductLink, ProductImageContainer, ProductSaleBanner, ProductPrice, ProductPriceDiscounted, Savings } from "./styles";
 import { RatingStars } from "../RatingStars/";
 
 /**
@@ -15,11 +15,17 @@ export default function ProductCard({ product }) {
         <ProductImage src={imageUrl} alt={title} />
         {price === discountedPrice ? "" : <ProductSaleBanner>Sale {Math.round(((price - discountedPrice) / price) * 100)}%</ProductSaleBanner>}
       </ProductImageContainer>
-
       <div>
         <ProductHeading>{title}</ProductHeading>
         <RatingStars rating={rating} reviews={reviews}></RatingStars>
-        <p>Price: {price === discountedPrice ? `kr ${price}` : `kr ${discountedPrice}, save kr ${(price - discountedPrice).toFixed(2)}`}</p>
+        {price === discountedPrice ? (
+          <ProductPrice>Price: NOK {price} </ProductPrice>
+        ) : (
+          <>
+            <Savings>Save: NOK {(price - discountedPrice).toFixed(2)}</Savings>
+            <ProductPriceDiscounted>Price: NOK {discountedPrice}</ProductPriceDiscounted>
+          </>
+        )}
         <ProductLink to={`/product/${id}`}>View More</ProductLink>
       </div>
     </ProductContainer>

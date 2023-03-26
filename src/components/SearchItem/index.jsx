@@ -10,7 +10,7 @@ export default function SearchItem({ item }) {
     <SearchItemLink to={`product/${item.id}`}>
       <SearchItemImage src={item.imageUrl} alt={item.title} />
       <SearchItemTitle>{item.title}</SearchItemTitle>
-      <SearchItemPrice>Price: kr {item.discountedPrice}</SearchItemPrice>
+      <SearchItemPrice>Price: NOK {item.discountedPrice}</SearchItemPrice>
     </SearchItemLink>
   );
 }

@@ -47,8 +47,8 @@ function CartPage() {
               </CartItemImageContainer>
               <CartItemDetailsContainer>
                 <CartItemTitle>{item.title}</CartItemTitle>
-                <p>Unit Price: {item.discountedPrice.toFixed(2)} kr</p>
-                <p>Total Price: {(item.discountedPrice * item.quantity).toFixed(2)} kr</p>
+                <p>Unit Price: NOK {item.discountedPrice.toFixed(2)}</p>
+                <p>Total Price: {(item.discountedPrice * item.quantity).toFixed(2)} NOK</p>
                 <p>
                   Quantity:
                   <QuantityButton
@@ -76,12 +76,12 @@ function CartPage() {
         <CartCheckoutSection>
           <CartCheckoutDetails>
             <h2>Checkout Summary</h2>
-            <p>Price: {(cart.total / 1.25).toFixed(2)}</p>
-            <p>VAT 25%: {(cart.total - cart.total / 1.25).toFixed(2)} </p>
+            <p>Price: NOK {(cart.total / 1.25).toFixed(2)}</p>
+            <p>VAT 25%: NOK {(cart.total - cart.total / 1.25).toFixed(2)} </p>
             <p>Delivery: Free.</p>
 
             <p>
-              <b>Total Price: kr {cart.total.toFixed(2)}</b>
+              <b>Total Price: NOK {cart.total.toFixed(2)}</b>
             </p>
             <CartCheckoutButton to="../success">Place Order</CartCheckoutButton>
           </CartCheckoutDetails>

@@ -103,12 +103,12 @@ function ProductPage() {
           <Divider />
           {data.discountedPrice < data.price ? (
             <PreviousPrice>
-              Original Price: <PreviousPriceAmount>kr {data.price}</PreviousPriceAmount>
+              Original Price: <PreviousPriceAmount>NOK {data.price}</PreviousPriceAmount>
             </PreviousPrice>
           ) : (
             ""
           )}
-          <CurrentPrice>Current Price: {data.discountedPrice < data.price ? `kr ${data.discountedPrice}, Save kr ${data.price - data.discountedPrice}` : "kr " + data.price}</CurrentPrice>
+          <CurrentPrice>Current Price: {data.discountedPrice < data.price ? `NOK ${data.discountedPrice}, Save NOK ${data.price - data.discountedPrice}` : "kr " + data.price}</CurrentPrice>
           <Divider />
           {inCart ? <p>Already {cartItem[0].quantity} in your cart.</p> : ""}
           {popups.map((popup) => (

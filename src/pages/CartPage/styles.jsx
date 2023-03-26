@@ -36,13 +36,23 @@ export const CartItemContainer = styled.div`
   border-bottom: 1px solid black;
   align-items: center;
   width: 100%;
+  @media (min-width: 800px) {
+    grid-template-columns: 100px 1fr;
+  }
+
+  @media (min-width: 800px) {
+    grid-template-columns: 150px 1fr;
+  }
 `;
 
 export const CartItemImageContainer = styled.div`
   background-color: ${({ theme }) => theme.color.tertiary};
-  width: 80px;
+  width: 100%;
   height: 70px;
   overflow: hidden;
+  @media (min-width: 800px) {
+    height: 130px;
+  }
 `;
 
 export const CartItemDetailsContainer = styled.div`
@@ -55,8 +65,8 @@ export const CartItemTitle = styled.h3`
 `;
 
 export const CartItemImage = styled.img`
-  width: 80px;
-  height: 70px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 
@@ -73,7 +83,7 @@ export const QuantityButton = styled.button`
   padding: 0.5rem;
   text-align: center;
   transition: all 0.5s;
-
+  margin: 0 0.25rem;
   :hover {
     background-color: ${({ theme }) => theme.color.secondary};
     border: 1px solid ${({ theme }) => theme.color.tertiary};
@@ -92,6 +102,10 @@ export const RemoveButton = styled(QuantityButton)`
     background-color: darkred;
     border: 1px solid #c78080;
     cursor: pointer;
+  }
+
+  @media (min-width: 900px) {
+    margin-top: -3rem;
   }
 `;
 

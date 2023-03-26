@@ -24,6 +24,19 @@ export const ProductImage = styled.img`
   margin-bottom: 1.5rem;
 `;
 
+export const ProductPriceDiscounted = styled.p`
+  font-weight: 600;
+`;
+
+export const ProductPrice = styled(ProductPriceDiscounted)`
+  margin-top: 3.275rem;
+`;
+
+export const Savings = styled(ProductPriceDiscounted)`
+  padding: 0.125rem;
+  background-color: ${({ theme }) => theme.color.secondary};
+`;
+
 export const ProductLink = styled(StandardButtonLink)`
   margin: 1rem auto;
 `;

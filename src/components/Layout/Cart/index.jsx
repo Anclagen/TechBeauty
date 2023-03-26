@@ -33,7 +33,7 @@ export default function Cart() {
               </div>
             ))
           : "Your Cart Is Empty."}
-        {cart.products.length > 0 ? <p>Total: kr {cart.total.toFixed(2)}</p> : ""}
+        {cart.products.length > 0 ? <p>Total: NOK {cart.total.toFixed(2)}</p> : ""}
       </CartItemsList>
     </CartIcon>
   );
