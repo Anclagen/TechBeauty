@@ -61,7 +61,7 @@ function SuccessPage() {
           {order.products.map((product) => (
             <tr key={product.id}>
               <td>
-                <OrderSummaryLink>{product.title}</OrderSummaryLink>
+                <OrderSummaryLink to={`/product/${product.id}`}>{product.title}</OrderSummaryLink>
               </td>
               <td>{product.quantity}</td>
               <td>{(product.discountedPrice * product.quantity).toFixed(2)}</td>
