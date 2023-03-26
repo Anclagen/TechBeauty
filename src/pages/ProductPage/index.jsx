@@ -85,7 +85,10 @@ function ProductPage() {
     );
   }
 
+  // update the head
   updateHead(data.title, data.description);
+
+  // return the product page
   return (
     <Wrapper>
       <Heading1 id="main">{data.title}</Heading1>
