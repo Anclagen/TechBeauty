@@ -3,7 +3,9 @@
  * @param {Boolean} isLoading Check for if the data has been fetched
  * @param {Boolean} isError Check for if there was an error with the request
  * @param {Array} data Array of products
- * @returns
+ * @returns {JSX.Element} Drop down options
+ * @example
+ * <FilterCategoryOptions isLoading={isLoading} isError={isError} data={data} />
  */
 export default function FilterCategoryOptions({ isLoading, isError, data = [] }) {
   if (isLoading || isError) {

@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 
 /**
  * Header component for page, containing navigation.
+ * @returns {JSX.Element} Header component
  */
 export default function Header() {
   const [display, toggleOpen] = useState("none");

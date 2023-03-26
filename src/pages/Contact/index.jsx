@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { ContactSuccess, ContactForm, ContactLabel, ContactInput, ContactTextArea, ContactSubmit, ContactErrorReporting, ContactInputContainer, ContactReturnButton } from "./styles";
 
+// schema for form validation
 const schema = yup
   .object({
     fullName: yup.string().trim().min(3, "Full name is required and must be at least 3 characters.").required(),
@@ -14,6 +15,10 @@ const schema = yup
   })
   .required();
 
+/**
+ * Creates Contact page
+ * @returns {JSX.Element} Contact page
+ */
 function ContactPage() {
   updateHead("Contact Us", "Contact TechBeauty with your queries, concerns and suggestions.");
   const [success, setSuccess] = useState(false);
@@ -26,17 +31,20 @@ function ContactPage() {
     resolver: yupResolver(schema),
   });
 
+  // submit form data
   function onSubmit(data) {
     console.log(data);
     setSuccess(true);
   }
 
+  // reset form on successful submission
   useEffect(() => {
     if (isSubmitSuccessful) {
       reset();
     }
   }, [isSubmitSuccessful, reset]);
 
+  // if form is submitted successfully, show success message
   if (success) {
     return (
       <main>
@@ -53,6 +61,7 @@ function ContactPage() {
     );
   }
 
+  // on load or if form is not submitted successfully, show form
   return (
     <main>
       <ContactForm onSubmit={handleSubmit(onSubmit)}>

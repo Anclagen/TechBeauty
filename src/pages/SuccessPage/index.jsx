@@ -16,12 +16,14 @@ const getLocalHistory = () => {
   }
 };
 
+// Returns the checkout success page
 function SuccessPage() {
   updateHead("Checkout Success", "Your order has been successfully placed");
   const { products, total } = useSelector((state) => state.cart);
   const [order, setOrder] = useState({ products: [], orderNumber: "", total: 0 });
   const dispatch = useDispatch();
 
+  // when the page loads, check if the cart is empty and if not, save the order to local storage, clear the cart and set current order for rendering.
   useEffect(() => {
     if (products.length > 0) {
       const orderNumber = Date.now().toString(36) + Math.random().toString(36).substring(2);
@@ -34,6 +36,7 @@ function SuccessPage() {
     }
   }, [dispatch, products, total]);
 
+  // if the cart is empty, show no order found
   if (products.length === 0 && order.products.length === 0) {
     return (
       <SuccessPageWrapper>
@@ -43,6 +46,7 @@ function SuccessPage() {
     );
   }
 
+  // if the cart is not empty, show the order summary
   return (
     <SuccessPageWrapper>
       <h1 id="main">Order Successful</h1>

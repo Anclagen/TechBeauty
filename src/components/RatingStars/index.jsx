@@ -6,7 +6,9 @@ import { RatingStar } from "./styles";
  * Create rating stars for a product out of 5.
  * @param {Number} rating current rating of the product
  * @param {Array} reviews array of reviews with ratings for product
- * @returns
+ * @returns {JSX.Element} Rating stars
+ * @example
+ * <RatingStars rating={product.rating} reviews={product.reviews} />
  */
 export function RatingStars({ rating, reviews }) {
   const full = parseInt(Math.round(rating));

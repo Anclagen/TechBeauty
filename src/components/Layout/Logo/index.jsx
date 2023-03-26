@@ -3,6 +3,7 @@ import { LogoImg, LogoLink, LogoText } from "./styles";
 
 /**
  * Creates the logo link to home page.
+ * @return {JSX.Element} Logo link
  */
 export default function Logo() {
   return (

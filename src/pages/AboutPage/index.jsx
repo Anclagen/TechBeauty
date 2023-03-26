@@ -1,5 +1,9 @@
 import { AboutContentWrapper, AboutHeader, AboutMain } from "./styles";
 
+/**
+ * About page component.
+ * @returns {JSX.Element} About page
+ */
 function AboutPage() {
   return (
     <AboutMain>

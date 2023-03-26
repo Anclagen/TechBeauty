@@ -6,9 +6,12 @@ import { search } from "../../utilities/search";
 
 /**
  * This creates a search input, with dropdown links to items related to input.
+ * @returns {JSX.Element} Search input
+ * @example
+ * <Search />
  */
 export default function Search() {
-  const { isLoading, data } = useSelector((state) => state.products);
+  const { isLoading, isError, data } = useSelector((state) => state.products);
   const [query, setQuery] = useState("");
 
   //filter out result for a single letter
@@ -24,7 +27,7 @@ export default function Search() {
   return (
     <SearchContainer>
       <HiddenLabel htmlFor="search">Search Input</HiddenLabel>
-      <SearchInput id="search" placeholder="Search TechBeauty." type="search" autoComplete="off" disabled={isLoading} onChange={onInputQuery} value={query} />
+      <SearchInput id="search" placeholder="Search TechBeauty." type="search" autoComplete="off" disabled={isLoading && isError} onChange={onInputQuery} value={query} />
       <AutoComplete>
         {results.length > 0 ? (
           <ResultContainer>

@@ -2,6 +2,7 @@ import { FooterContainer, FooterHeading, FooterLinks } from "./styles";
 
 /**
  * Creates the Footer element, with site map and copyright.
+ * @return {JSX.Element} Footer element and site map
  */
 export default function Footer() {
   return (

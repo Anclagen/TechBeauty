@@ -5,7 +5,7 @@ import { RatingStars } from "../RatingStars/";
 /**
  * Creates a product card for a specific product.
  * @param {Object} product The product details
- * @returns
+ * @returns {JSX.Element} Product card
  */
 export default function ProductCard({ product }) {
   const { id, title, imageUrl, price, discountedPrice, rating, reviews } = product;

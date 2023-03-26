@@ -2,7 +2,7 @@
  * Sorts data based on requested sort criteria
  * @param {Array} data an array of products
  * @param {String} value The required sorting state.
- * @returns
+ * @returns {Array} sorted array of products
  */
 export const sortProducts = function (data, value) {
   let filteredData = [...data];

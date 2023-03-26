@@ -6,7 +6,9 @@ import { RelatedProductsGrid } from "./styles";
 /**
  * Returns a grid of related products
  * @param {Object} Product object containing product data
- * @returns
+ * @returns {JSX.Element} Related products grid
+ * @example
+ * <RelatedProducts product={product} />
  */
 function RelatedProducts({ product }) {
   const { data, isLoading, isError } = useSelector((state) => state.products);

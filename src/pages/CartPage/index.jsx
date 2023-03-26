@@ -19,11 +19,18 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../context/cartSlice";
 
+/**
+ * Returns the cart page
+ * @returns {JSX.Element} Cart page
+ */
 function CartPage() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
+  // update the head
   updateHead("Your Cart", "Your cart page, showing all items you have added.");
+
+  // if the cart is empty, show the empty cart page
   if (cart.products.length === 0) {
     return (
       <EmptyCart>
@@ -34,6 +41,7 @@ function CartPage() {
     );
   }
 
+  // if the cart is not empty, show the cart page
   return (
     <Wrapper>
       <h1 id="main">Your Cart</h1>

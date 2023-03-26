@@ -14,14 +14,18 @@ import FilterCategoryOptions from "../../components/FilterCategories";
  * @returns
  */
 export default function Home() {
-  updateHead("TechBeauty | Home", "TechBeauty an e-commerce website, selling a range of items from beauty and fashion product to audio and computer equipment.");
   const { data, isLoading, isError } = useSelector((state) => state.products);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filterHeading, setFilterHeading] = useState("All Products");
   const [sortedProducts, setSortedProducts] = useState([]);
   const [sortValue, setSortValue] = useState("");
+  // fetch products
   Products();
 
+  //update the page title and meta description
+  updateHead("TechBeauty | Home", "TechBeauty an e-commerce website, selling a range of items from beauty and fashion product to audio and computer equipment.");
+
+  //filter and sort products on load
   useEffect(() => {
     if (!isLoading && !isError) {
       setFilteredProducts(data);
@@ -29,6 +33,7 @@ export default function Home() {
     }
   }, [isLoading, isError, data]);
 
+  //filter and sort products on change of filter dropdown
   const onChangeFilter = (event) => {
     const value = event.target.value;
     const filtered = filterProducts(data, value);
@@ -37,6 +42,7 @@ export default function Home() {
     setSortedProducts(sortProducts(filtered, sortValue));
   };
 
+  //filter and sort products on change of sort dropdown
   const onChangeSort = (event) => {
     const value = event.target.value;
     const sorted = sortProducts(filteredProducts, value);
@@ -44,6 +50,7 @@ export default function Home() {
     setSortValue(value);
   };
 
+  //render the page
   return (
     <Main>
       <HomeHeading id="main">Welcome To TechBeauty</HomeHeading>

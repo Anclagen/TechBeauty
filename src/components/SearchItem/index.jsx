@@ -3,7 +3,9 @@ import { SearchItemImage, SearchItemLink, SearchItemTitle, SearchItemPrice } fro
 /**
  * Creates a search dropdown link to an item.
  * @param {Object} item to be displayed
- * @returns
+ * @returns {JSX.Element} Search dropdown item
+ * @example
+ * <SearchItem item={item} />
  */
 export default function SearchItem({ item }) {
   return (

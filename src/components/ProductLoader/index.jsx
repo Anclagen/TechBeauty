@@ -2,6 +2,7 @@ import { ProductLoaderContainer, ProductLoaderImage, ProductLoaderHeading, Produ
 
 /**
  * Skeleton loader for product cards
+ * @returns {JSX.Element} Skeleton loader
  */
 export default function ProductCardLoader() {
   return (

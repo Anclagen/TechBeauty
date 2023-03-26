@@ -1,5 +1,9 @@
 import { ImageLoader, ContentLoader, HeadingLoader, DescriptionLoader, DividerLoader, PriceLoader, ButtonLoader } from "./styles";
 
+/**
+ * Skeleton loader for product page
+ * @returns {JSX.Element} Skeleton loader for product page
+ */
 function ProductPageLoader() {
   return (
     <>

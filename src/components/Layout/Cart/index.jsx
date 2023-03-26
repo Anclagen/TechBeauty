@@ -7,6 +7,7 @@ import { useEffect } from "react";
 /**
  * Creates the cart icon for the nav bar and also has useEffect to update local storage on cart change.
  * @param {String} currentPage used for current page indicators
+ * @return {JSX.Element} Cart icon and cart items list
  */
 export default function Cart() {
   //get cart
