@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { baseURL } from "../../utilities/constants";
-import { useAPI } from "../../hooks/API";
+import { useAPI } from "../../hooks/useAPI";
 import { updateHead } from "../../utilities/updateHead";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../context/cartSlice";
