@@ -5,8 +5,10 @@ import GlobalStyle from "./components/styles/Global.styles";
 import theme from "./components/styles/Themes.styles";
 import { ThemeProvider } from "styled-components";
 import { Home, ProductPage, CartPage, SuccessPage, ContactPage, NotFound, AboutPage } from "./pages";
+import { useLocalStorageListener } from "./hooks/useLocalStorageListener";
 
 function App() {
+  useLocalStorageListener();
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
