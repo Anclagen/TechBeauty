@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #root{
-    min-height: 100dvh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
   }
