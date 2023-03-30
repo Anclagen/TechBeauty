@@ -1,6 +1,5 @@
 import ProductCard from "../ProductCard";
-import Products from "../../hooks/Product";
-import { useSelector } from "react-redux";
+import useProducts from "../../hooks/useProducts";
 import { RelatedProductsGrid } from "./styles";
 
 /**
@@ -11,8 +10,7 @@ import { RelatedProductsGrid } from "./styles";
  * <RelatedProducts product={product} />
  */
 function RelatedProducts({ product }) {
-  const { data, isLoading, isError } = useSelector((state) => state.products);
-  Products();
+  const { data, isLoading, isError } = useProducts();
 
   if (isLoading) return <div>Loading...</div>;
 

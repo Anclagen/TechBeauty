@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { HomeHeading, PageWrapper, Main, FilterContainer, Filter, HiddenLabel } from "./styles";
 import { updateHead } from "../../utilities/updateHead";
 import Search from "../../components/Search";
-import { useSelector } from "react-redux";
-import Products from "../../hooks/Product";
+import useProducts from "../../hooks/useProducts";
 import ProductsGrid from "../../components/ProductsGrid";
 import { filterProducts } from "../../utilities/filter";
 import { sortProducts } from "../../utilities/sort";
@@ -14,13 +13,11 @@ import FilterCategoryOptions from "../../components/FilterCategories";
  * @returns
  */
 export default function Home() {
-  const { data, isLoading, isError } = useSelector((state) => state.products);
+  const { data, isLoading, isError } = useProducts();
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filterHeading, setFilterHeading] = useState("All Products");
   const [sortedProducts, setSortedProducts] = useState([]);
   const [sortValue, setSortValue] = useState("");
-  // fetch products
-  Products();
 
   //update the page title and meta description
   updateHead("TechBeauty | Home", "TechBeauty an e-commerce website, selling a range of items from beauty and fashion product to audio and computer equipment.");

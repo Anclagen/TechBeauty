@@ -6,9 +6,9 @@ import { fetchingProducts, fetchedProducts, fetchFailed } from "../context/produ
 /**
  *  Fetch products and store them in redux state.
  */
-export default function Products() {
+export default function useProducts() {
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.products);
+  const { data, isLoading, isError } = useSelector((state) => state.products);
 
   //prevent constant reloading, also a means of storing for search component.
   useEffect(() => {
@@ -26,4 +26,6 @@ export default function Products() {
       getProducts();
     }
   }, [dispatch, data]);
+
+  return { data, isLoading, isError };
 }
