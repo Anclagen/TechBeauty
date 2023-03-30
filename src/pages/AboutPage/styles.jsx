@@ -29,7 +29,7 @@ export const AboutHeader = styled.div`
   position: relative;
   margin: 0;
   overflow: hidden;
-  min-height: 65dvh;
+  min-height: 65vh;
 
   h1 {
     font-size: 1.5rem;
