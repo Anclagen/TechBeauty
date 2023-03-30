@@ -5,6 +5,9 @@ import { fetchingProducts, fetchedProducts, fetchFailed } from "../context/produ
 
 /**
  *  Fetch products and store them in redux state.
+ *  @returns {Object} { data, isLoading, isError }
+ *   @example
+ *   const { data, isLoading, isError } = useProducts();
  */
 export default function useProducts() {
   const dispatch = useDispatch();
