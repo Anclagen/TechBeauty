@@ -56,7 +56,7 @@ function CartPage() {
               <CartItemDetailsContainer>
                 <CartItemTitle>{item.title}</CartItemTitle>
                 <p>Unit Price: NOK {item.discountedPrice.toFixed(2)}</p>
-                <p>Total Price: {(item.discountedPrice * item.quantity).toFixed(2)} NOK</p>
+                <p>Total Price: NOK {(item.discountedPrice * item.quantity).toFixed(2)}</p>
                 <p>
                   Quantity:
                   <QuantityButton

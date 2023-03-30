@@ -111,7 +111,9 @@ function ProductPage() {
           ) : (
             ""
           )}
-          <CurrentPrice>Current Price: {data.discountedPrice < data.price ? `NOK ${data.discountedPrice}, Save NOK ${data.price - data.discountedPrice}` : "kr " + data.price}</CurrentPrice>
+          <CurrentPrice>
+            Current Price: {data.discountedPrice < data.price ? `NOK ${data.discountedPrice}, Save NOK ${Math.round(data.price - data.discountedPrice)}` : "kr " + data.price}
+          </CurrentPrice>
           <Divider />
           {inCart ? <p>Already {cartItem[0].quantity} in your cart.</p> : ""}
           {popups.map((popup) => (
