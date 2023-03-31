@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PageWrapper = styled.div`
   margin: 0 auto;
   max-width: 1800px;
-  padding: 1rem;
+  padding-bottom: 2rem;
 `;
 
 export const Main = styled.main`
@@ -22,6 +22,7 @@ export const HomeHeading = styled.h1`
 export const FilterContainer = styled.div`
   margin: 0 auto;
   max-width: 280px;
+
   @media (min-width: 700px) {
     max-width: 640px;
   }
@@ -44,7 +45,9 @@ export const Filter = styled.select`
   border-color: ${({ theme }) => theme.color.secondary};
   background-color: ${({ theme }) => theme.color.tertiary};
   padding-left: 1rem;
-  float: right;
+  @media (min-width: 700px) {
+    float: right;
+  }
 `;
 
 export const HiddenLabel = styled.label`

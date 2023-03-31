@@ -3,8 +3,12 @@ import { StandardButton } from "../../components/styles/Button.styles";
 
 export const Wrapper = styled.main`
   margin: 90px auto 2rem auto;
-  padding: 0 1rem;
-  width: 90vw;
+  padding: 0 0.125rem;
+
+  @media (min-width: 400px) {
+    padding: 0 1rem;
+  }
+
   @media (min-width: 700px) {
     padding: 0 2rem;
     max-width: 1100px;
@@ -42,7 +46,6 @@ export const ImageContainer = styled.div`
   background-color: ${({ theme }) => theme.color.tertiary};
   overflow: hidden;
   border-radius: 3rem;
-  overflow: hidden;
   height: fit-content;
 `;
 

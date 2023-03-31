@@ -6,7 +6,7 @@ export const ProductGrid = styled.div`
   grid-template-columns: minmax(0, 1fr);
   grid-gap: 2rem;
   margin: 0 auto;
-  max-width: 280px;
+  max-width: 300px;
   @media (min-width: 700px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 640px;
