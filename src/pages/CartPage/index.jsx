@@ -1,4 +1,5 @@
-import { updateHead } from "../../utilities/updateHead";
+import { useSelector, useDispatch } from "react-redux";
+import Head from "../../components/Head";
 import {
   Wrapper,
   CartItemImage,
@@ -16,7 +17,6 @@ import {
   ReturnButton,
   ClearCartButton,
 } from "./styles";
-import { useSelector, useDispatch } from "react-redux";
 import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../context/cartSlice";
 
 /**
@@ -27,13 +27,11 @@ function CartPage() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
-  // update the head
-  updateHead("Your Cart", "Your cart page, showing all items you have added.");
-
   // if the cart is empty, show the empty cart page
   if (cart.products.length === 0) {
     return (
       <EmptyCart>
+        <Head title="Empty Cart" description="Your cart page, showing all items you have added." />
         <h1 id="main">Empty Cart</h1>
         <p>Nothing in your cart.</p>
         <ReturnButton to="/">Return to Store</ReturnButton>
@@ -44,6 +42,7 @@ function CartPage() {
   // if the cart is not empty, show the cart page
   return (
     <Wrapper>
+      <Head title="Your Cart" description="Your cart page, showing all items you have added." />
       <h1 id="main">Your Cart</h1>
       <CartGrid>
         <section>

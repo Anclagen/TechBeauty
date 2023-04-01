@@ -1,4 +1,4 @@
-import { updateHead } from "../../utilities/updateHead";
+import Head from "../../components/Head";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { SuccessPageWrapper, OrderNumber, ReturnButton, Table, OrderSummaryLink } from "./styles";
@@ -18,7 +18,6 @@ const getLocalHistory = () => {
 
 // Returns the checkout success page
 function SuccessPage() {
-  updateHead("Checkout Success", "Your order has been successfully placed");
   const { products, total } = useSelector((state) => state.cart);
   const [order, setOrder] = useState({ products: [], orderNumber: "", total: 0 });
   const dispatch = useDispatch();
@@ -40,6 +39,7 @@ function SuccessPage() {
   if (products.length === 0 && order.products.length === 0) {
     return (
       <SuccessPageWrapper>
+        <Head title="No Order Found" description="No order found" />
         <h1 id="main">No Order Found</h1>
         <ReturnButton to="/">Return To Store</ReturnButton>
       </SuccessPageWrapper>
@@ -49,6 +49,7 @@ function SuccessPage() {
   // if the cart is not empty, show the order summary
   return (
     <SuccessPageWrapper>
+      <Head title="Order Successful" description="Order successful" />
       <h1 id="main">Order Successful</h1>
       <span>
         Order ID: <OrderNumber>{order.orderNumber}</OrderNumber>

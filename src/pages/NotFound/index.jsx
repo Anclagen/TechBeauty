@@ -1,4 +1,4 @@
-import { updateHead } from "../../utilities/updateHead";
+import Head from "../../components/Head";
 import { Wrapper, NotFoundLinkButton } from "./styles";
 
 /**
@@ -6,7 +6,7 @@ import { Wrapper, NotFoundLinkButton } from "./styles";
  * @returns {JSX.Element} 404 page
  */
 function NotFound() {
-  updateHead("404 - Page Not Found", "This pages doesn't really exist.....");
+  <Head title="Page Not Found" description="Page not found" />;
   return (
     <Wrapper id="main">
       <h1>Page Not found</h1>

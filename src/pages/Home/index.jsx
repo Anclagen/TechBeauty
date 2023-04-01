@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { HomeHeading, PageWrapper, Main, FilterContainer, Filter, HiddenLabel } from "./styles";
-import { updateHead } from "../../utilities/updateHead";
+import Head from "../../components/Head";
 import Search from "../../components/Search";
 import useProducts from "../../hooks/useProducts";
 import ProductsGrid from "../../components/ProductsGrid";
@@ -18,9 +18,6 @@ export default function Home() {
   const [filterHeading, setFilterHeading] = useState("All Products");
   const [sortedProducts, setSortedProducts] = useState([]);
   const [sortValue, setSortValue] = useState("");
-
-  //update the page title and meta description
-  updateHead("TechBeauty | Home", "TechBeauty an e-commerce website, selling a range of items from beauty and fashion product to audio and computer equipment.");
 
   //filter and sort products on load
   useEffect(() => {
@@ -50,6 +47,7 @@ export default function Home() {
   //render the page
   return (
     <Main>
+      <Head title="Home" description="TechBeauty an e-commerce website, selling a range of items from beauty and fashion product to audio and computer equipment." />
       <HomeHeading id="main">Welcome To TechBeauty</HomeHeading>
       <Search />
       <PageWrapper>
