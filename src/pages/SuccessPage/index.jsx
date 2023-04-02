@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { SuccessPageWrapper, OrderNumber, ReturnButton, Table, OrderSummaryLink } from "./styles";
 import { useEffect } from "react";
-import { clearCart } from "../../context/cartSlice";
+import { clearCart } from "../../ReduxStore/cartSlice";
 const initialState = [];
 
 // Check local for a cart

@@ -4,7 +4,7 @@ import { baseURL } from "../../utilities/constants";
 import { useAPI } from "../../hooks/useAPI";
 import Head from "../../components/Head";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../context/cartSlice";
+import { addToCart } from "../../ReduxStore/cartSlice";
 import {
   PageGrid,
   Wrapper,

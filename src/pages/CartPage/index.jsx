@@ -17,7 +17,7 @@ import {
   ReturnButton,
   ClearCartButton,
 } from "./styles";
-import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../context/cartSlice";
+import { addToCart, removeFromCart, decreaseQuantity, clearCart } from "../../ReduxStore/cartSlice";
 
 /**
  * Returns the cart page

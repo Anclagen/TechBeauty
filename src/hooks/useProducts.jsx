@@ -1,7 +1,7 @@
 import { baseURL } from "../utilities/constants";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchingProducts, fetchedProducts, fetchFailed } from "../context/productsSlice";
+import { fetchingProducts, fetchedProducts, fetchFailed } from "../ReduxStore/productsSlice";
 
 /**
  *  Fetch products and store them in redux state.
