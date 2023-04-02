@@ -1,14 +1,13 @@
-import { updateHead } from "../../utilities/updateHead";
 import React, { useState } from "react";
-import { ContactSuccess, ContactFormContainer, ContactReturnButton } from "./styles";
+import Head from "../../components/Head";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import { ContactSuccess, ContactFormContainer, ContactReturnButton } from "./styles";
 
 /**
  * Creates Contact page
  * @returns {JSX.Element} Contact page
  */
 function ContactPage() {
-  updateHead("Contact Us", "Contact TechBeauty with your queries, concerns and suggestions.");
   // state to track if form is submitted successfully
   const [success, setSuccess] = useState(false);
 
@@ -22,6 +21,7 @@ function ContactPage() {
   if (success) {
     return (
       <main>
+        <Head title="Contact Us" description="Contact TechBeauty with your queries, concerns and suggestions." />
         <ContactFormContainer>
           <h1 id="main">Contact Us</h1>
           <ContactSuccess>Submitted Successfully</ContactSuccess>
@@ -38,6 +38,7 @@ function ContactPage() {
   // Render contact form
   return (
     <main>
+      <Head title="Contact Us" description="Contact TechBeauty with your queries, concerns and suggestions." />
       <ContactFormContainer>
         <h1 id="main">Contact Us</h1>
         <ContactForm onSubmit={onSubmit} />

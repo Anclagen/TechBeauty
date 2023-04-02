@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { baseURL } from "../../utilities/constants";
 import { useAPI } from "../../hooks/useAPI";
-import { updateHead } from "../../utilities/updateHead";
+import Head from "../../components/Head";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../context/cartSlice";
+import { addToCart } from "../../ReduxStore/cartSlice";
 import {
   PageGrid,
   Wrapper,
@@ -65,6 +65,7 @@ function ProductPage() {
   if (isLoading) {
     return (
       <Wrapper>
+        <Head title="Loading Product" description="Loading product page, please wait." />
         <Heading1 id="main">Loading Product.....</Heading1>
         <RatingLink>
           <RatingStars rating={0} reviews={[]} />
@@ -80,17 +81,16 @@ function ProductPage() {
   if (isError || data.statusCode > 200) {
     return (
       <Wrapper>
+        <Head title="Error" description="An error occurred, refresh and try again or check the product still exists." />
         <Heading1 id="main">An error occurred, refresh and try again or check the product still exists.</Heading1>
       </Wrapper>
     );
   }
 
-  // update the head
-  updateHead(data.title, data.description);
-
   // return the product page
   return (
     <Wrapper>
+      <Head title={data.title} description={data.description} />
       <Heading1 id="main">{data.title}</Heading1>
       <RatingLink href="#reviews">
         <RatingStars rating={data.rating} reviews={data.reviews} />

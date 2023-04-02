@@ -1,4 +1,5 @@
 import { AboutContentWrapper, AboutHeader, AboutMain } from "./styles";
+import Head from "../../components/Head";
 
 /**
  * About page component.
@@ -7,6 +8,7 @@ import { AboutContentWrapper, AboutHeader, AboutMain } from "./styles";
 function AboutPage() {
   return (
     <AboutMain>
+      <Head title="About" description="About TechBeauty" />
       <AboutHeader>
         <h1>About TechBeauty</h1>
       </AboutHeader>

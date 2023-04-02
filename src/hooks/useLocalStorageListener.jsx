@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { updateCart } from "../context/cartSlice";
+import { updateCart } from "../ReduxStore/cartSlice";
 
 /**
  * Maintains the cart state in sync with the local storage across tabs.

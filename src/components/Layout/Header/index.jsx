@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-//import { HeaderStyles, Navigation, NavLinks, MainLinksContainer, ThemeCartContainer, ThemeToggle } from "./styles";
 import { HeaderStyles, Navigation, NavLinks, MainLinksContainer, ThemeCartContainer, NavSkip } from "./styles";
 import Cart from "../Cart";
 import Logo from "../Logo";
 import HamburgerMenu from "../HamburgerMenu";
 import { useLocation } from "react-router-dom";
-//import moonIcon from "../../../assets/moon_icon.jpg";
-//import sunIcon from "../../../assets/sun_icon.jpg";
 
 /**
  * Header component for page, containing navigation.
@@ -42,7 +39,6 @@ export default function Header() {
           </NavLinks>
         </MainLinksContainer>
         <ThemeCartContainer>
-          {/* <ThemeToggle src={moonIcon} /> */}
           <Cart currentLocation={currentLocation} />
         </ThemeCartContainer>
       </Navigation>
